@@ -6,7 +6,7 @@
   <title>VerifyX - Smart Verification Hub</title>
 
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -89,11 +89,6 @@
       <h2 class="text-xl font-semibold mb-2">👩‍⚕️ Professional Credentials</h2>
       <p class="text-sm text-gray-200">Verify doctors (NMC), lawyers (Bar Council), engineers, architects & more.</p>
     </div>
-
-    <div class="tilt-card glass rounded-3xl p-6 shadow-lg">
-      <h2 class="text-xl font-semibold mb-2">📄 Report Integration</h2>
-      <p class="text-sm text-gray-200">Plug verified data into VAK reports, internal checks, and third-party compliance tools.</p>
-    </div>
   </section>
 
   <!-- Footer -->
@@ -102,15 +97,12 @@
   </footer>
 
   <!-- Floating Action Button -->
-  <button class="fab" onclick="window.location.href='#verify'">Start Verifying</button>
+  <button class="fab" onclick="window.location.href='#services'">Start Verifying</button>
 
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      once: true,
-      duration: 800
-    });
+    AOS.init({ once: true, duration: 800 });
   </script>
 
 </body>
