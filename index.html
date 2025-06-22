@@ -87,6 +87,26 @@
       font-size: 20px;
       font-weight: 700;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1;
+    }
+
+    /* Walkthrough button */
+    .walkthrough-link {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: #1d4ed8;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .walkthrough-link:hover {
+      background: #2563eb;
     }
 
     @media(max-width: 768px) {
@@ -107,12 +127,15 @@
 </head>
 <body>
 
+  <!-- Walkthrough Button -->
+  <a href="walkthrough.html" class="walkthrough-link">🔍 Walkthrough</a>
+
   <div class="container">
     <!-- Left: Business Verifications -->
-<div class="half left">
+    <div class="half left">
       <h2> 🔍 Business Verification</h2>
       <a href="business.html" class="cta-button">Start Verifying</a>
-</div>
+    </div>
 
     <!-- Center Logo Box -->
     <div class="logo-center">VerifyX</div>
