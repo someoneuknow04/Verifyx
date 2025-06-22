@@ -25,6 +25,7 @@
     .container {
       display: flex;
       height: 100vh;
+      position: relative;
     }
 
     .half {
@@ -83,7 +84,8 @@
       font-size: 20px;
       font-weight: 700;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      z-index: 1;
+      z-index: 10;
+      text-align: center;
     }
 
     .walkthrough-link {
@@ -104,18 +106,43 @@
       background: #2563eb;
     }
 
+    footer {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: #94a3b8;
+      z-index: 999;
+      font-weight: 500;
+    }
+
     @media(max-width: 768px) {
       .container {
         flex-direction: column;
+        height: auto;
       }
+
       .half {
         width: 100%;
         padding: 60px 20px;
       }
+
       .logo-center {
-        position: static;
+        position: relative;
+        top: auto;
+        left: auto;
         transform: none;
-        margin: 20px auto;
+        margin: 30px auto;
+      }
+
+      footer {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 30px auto;
+        text-align: center;
       }
     }
   </style>
@@ -140,10 +167,14 @@
       <h2>🏦 Bank Portals</h2>
       <a href="bank-portals.html" class="cta-button">Go to Bank Portals</a>
     </div>
+
+    <!-- Footer Credit -->
+    <footer>Made with ❤️ by Someone</footer>
   </div>
 
   <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+
 </body>
 </html>
