@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VerifyX – Business Verification</title>
+  <title>VerifyX – Business Verifications</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
@@ -22,30 +22,58 @@
       font-weight: 800;
       margin-bottom: 10px;
     }
+    .illustration {
+      max-width: 280px;
+      margin: 20px auto;
+      display: block;
+    }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    .button {
-      background: #f5f7fa;
-      border: 2px solid #e0e0e0;
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #333;
+    .card {
+      background: #e7f6e7;
+      border: 2px solid #b3e6b3;
+      border-radius: 16px;
+      padding: 25px;
       text-align: center;
-      text-decoration: none;
-      transition: all 0.25s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-    .button:hover {
-      background: #3f83f8;
-      color: white;
-      transform: translateY(-3px);
+    .card:hover {
+      transform: translateY(-5px);
+      background: #30a14e;
+      color: #fff;
+    }
+    .card a {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: inherit;
+      text-decoration: none;
+    }
+    .card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    .back-button {
+      display: inline-block;
+      margin: 20px auto;
+      text-align: center;
+      padding: 12px 24px;
+      background: #30a14e;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .back-button:hover {
+      background: #1f7a35;
     }
     footer {
       text-align: center;
@@ -60,18 +88,50 @@
   <header>
     <h1>Business & Profession Verifications</h1>
     <p>Access government-approved verification portals instantly</p>
+    <img class="illustration" src="https://cdn-icons-png.flaticon.com/512/4206/4206233.png" alt="Business Illustration">
   </header>
 
   <div class="grid">
-    <a class="button" href="https://services.gst.gov.in/services/searchtp" target="_blank">GST Verification</a>
-    <a class="button" href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">UDYAM Verification</a>
-    <a class="button" href="https://foodlicensing.fssai.gov.in/cmsweb/TrackFBO.aspx" target="_blank">FSSAI License Status</a>
-    <a class="button" href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do" target="_blank">Company CIN/LLP Lookup</a>
-    <a class="button" href="https://www.dgft.gov.in/CP/?opt=iec-search" target="_blank">IEC Code (DGFT)</a>
-    <a class="button" href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Doctor (NMC)</a>
-    <a class="button" href="https://www.barcouncilofindia.org/about/about-the-bar-council-of-india/list-of-state-bar-councils/" target="_blank">Lawyer (Bar Councils)</a>
-    <a class="button" href="https://contractor.mahapwd.com/ContractorSearch.aspx" target="_blank">Contractor (PWD Maharashtra)</a>
-    <a class="button" href="https://www.irda.gov.in/intermediaries-surveyors" target="_blank">Surveyor (IRDAI)</a>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1413/1413925.png" alt="GST">
+      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">GST Verification</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="UDYAM">
+      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">UDYAM Verification</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4021/4021744.png" alt="FSSAI">
+      <a href="https://foodlicensing.fssai.gov.in/cmsweb/TrackFBO.aspx" target="_blank">FSSAI License Status</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4320/4320330.png" alt="CIN">
+      <a href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do" target="_blank">Company CIN/LLP Lookup</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/681/681392.png" alt="IEC">
+      <a href="https://www.dgft.gov.in/CP/?opt=iec-search" target="_blank">IEC Code (DGFT)</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3429/3429652.png" alt="Doctor">
+      <a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Doctor (NMC)</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="Lawyer">
+      <a href="https://www.barcouncilofindia.org/about/about-the-bar-council-of-india/list-of-state-bar-councils/" target="_blank">Lawyer (Bar Councils)</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1694/1694711.png" alt="Contractor">
+      <a href="https://contractor.mahapwd.com/ContractorSearch.aspx" target="_blank">Contractor (PWD Maharashtra)</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2027/2027414.png" alt="Surveyor">
+      <a href="https://www.irda.gov.in/intermediaries-surveyors" target="_blank">Surveyor (IRDAI)</a>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="index.html" class="back-button">⬅ Back to Home</a>
   </div>
 
   <footer>
