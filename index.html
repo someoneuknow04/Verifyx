@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VerifyX – Choose Path</title>
 
-  <!-- Font + AOS -->
+  <!-- Fonts + AOS -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -72,11 +72,20 @@
       transform: translateY(-2px);
     }
 
-    .logo-center {
+    .logo-wrapper {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .logo-center {
       background: white;
       color: #2e65f3;
       padding: 16px 32px;
@@ -84,7 +93,7 @@
       font-size: 20px;
       font-weight: 700;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      z-index: 10;
+      pointer-events: auto;
       text-align: center;
     }
 
@@ -128,18 +137,20 @@
         padding: 60px 20px;
       }
 
-      .logo-center {
+      .logo-wrapper {
         position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        margin: 30px auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+      }
+
+      .logo-center {
+        margin: auto;
       }
 
       footer {
         position: relative;
-        bottom: auto;
-        left: auto;
         transform: none;
         margin: 30px auto;
         text-align: center;
@@ -159,17 +170,19 @@
       <a href="business.html" class="cta-button">Start Verifying</a>
     </div>
 
-    <!-- Center Logo Box -->
-    <div class="logo-center" data-aos="zoom-in">VerifyX</div>
-
     <!-- Right: Bank Portals -->
     <div class="half right" data-aos="fade-left">
       <h2>🏦 Bank Portals</h2>
       <a href="bank-portals.html" class="cta-button">Go to Bank Portals</a>
     </div>
 
+    <!-- Perfectly Centered Logo -->
+    <div class="logo-wrapper">
+      <div class="logo-center" data-aos="zoom-in">VerifyX</div>
+    </div>
+
     <!-- Footer Credit -->
-    <footer>Made with ❤️ by Someone</footer>
+    <footer>Made by Someone</footer>
   </div>
 
   <!-- AOS Animation Script -->
