@@ -3,107 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VerifyX - Smart Verification Hub</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+  <title>VerifyX</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
     }
-
-    .tilt-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      transform-style: preserve-3d;
-      perspective: 1000px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
-    .tilt-card:hover {
-      transform: rotateY(6deg) rotateX(4deg) scale(1.04);
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
     }
-
-    .glass {
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .search-box {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+    }
+    .search-box input {
+      flex: 1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px 0 0 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    .search-box button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      background-color: #6366f1;
+      color: white;
+      cursor: pointer;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .card {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.07);
       backdrop-filter: blur(12px);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
+    .card:hover {
+      transform: rotateY(5deg) rotateX(3deg) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .card h2 {
+      margin-bottom: 10px;
+    }
     .fab {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background-color: #6366f1;
+      background: #6366f1;
       color: white;
-      padding: 14px 20px;
-      border-radius: 9999px;
-      font-weight: 600;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
       cursor: pointer;
-      transition: transform 0.3s ease;
-      z-index: 50;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
     }
-
-    .fab:hover {
-      transform: scale(1.05);
+    footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      font-size: 0.8rem;
+      color: #aaa;
     }
   </style>
 </head>
+<body>
 
-<body class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white min-h-screen">
-
-  <!-- Navbar -->
-  <nav class="w-full px-6 py-4 flex justify-between items-center bg-transparent backdrop-blur-md z-50">
-    <div class="text-2xl font-bold">🔐 VerifyX</div>
-    <div class="space-x-6 text-sm hidden sm:flex">
-      <a href="#verify" class="hover:underline">Verify</a>
-      <a href="#services" class="hover:underline">Services</a>
-      <a href="#contact" class="hover:underline">Contact</a>
+  <nav>
+    <div><strong>🔐 VerifyX</strong></div>
+    <div>
+      <a href="#verify">Verify</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="text-center mt-16 mb-12 px-4" data-aos="fade-down">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Your Trusted Verification Partner</h1>
-    <p class="text-lg text-gray-300 mb-6">Fast, secure, and reliable checks for professionals & businesses</p>
-
-    <!-- Search Box -->
-    <div class="max-w-xl mx-auto flex gap-2">
-      <input type="text" placeholder="Search GST / Udyam / Doctor ID..." class="w-full px-4 py-2 rounded-xl bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-      <button class="bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-xl font-medium">Search</button>
+  <header data-aos="fade-down">
+    <h1>Your Trusted Verification Partner</h1>
+    <p>Fast, secure, and reliable checks for professionals & businesses</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search GST / Udyam / Doctor ID..." />
+      <button>Search</button>
     </div>
   </header>
 
-  <!-- Services Grid -->
-  <section id="services" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl px-6 mx-auto" data-aos="fade-up">
-    <div class="tilt-card glass rounded-3xl p-6 shadow-lg">
-      <h2 class="text-xl font-semibold mb-2">🏢 Business Verification</h2>
-      <p class="text-sm text-gray-200">Instantly check GST, MSME (Udyam), Shop Act & Company registrations via official APIs.</p>
+  <section class="grid" id="services" data-aos="fade-up">
+    <div class="card">
+      <h2>🏢 Business Verification</h2>
+      <p>Check GST, MSME, Shop Act & Company registrations from official records.</p>
     </div>
-
-    <div class="tilt-card glass rounded-3xl p-6 shadow-lg">
-      <h2 class="text-xl font-semibold mb-2">👩‍⚕️ Professional Credentials</h2>
-      <p class="text-sm text-gray-200">Verify doctors (NMC), lawyers (Bar Council), engineers, architects & more.</p>
+    <div class="card">
+      <h2>👩‍⚕️ Professional Credentials</h2>
+      <p>Verify doctors, lawyers, engineers & architects from authorized databases.</p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="contact" class="mt-24 mb-10 text-center text-sm text-gray-500" data-aos="fade-up">
+  <footer id="contact" data-aos="fade-up">
     © 2025 VerifyX. All rights reserved.
   </footer>
 
-  <!-- Floating Action Button -->
-  <button class="fab" onclick="window.location.href='#services'">Start Verifying</button>
+  <div class="fab" onclick="window.location.href='#services'">Start Verifying</div>
 
-  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 800 });
-  </script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
 
 </body>
 </html>
