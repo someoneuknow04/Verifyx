@@ -10,78 +10,77 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #ffffff;
+      background: #f9f9ff;
       color: #111;
     }
     header {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 50px 20px 20px;
     }
     h1 {
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 800;
       margin-bottom: 10px;
+      color: #1f2937;
     }
-    .illustration {
-      max-width: 280px;
-      margin: 20px auto;
-      display: block;
+    header p {
+      font-size: 16px;
+      color: #4b5563;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      padding: 40px 20px;
-      max-width: 1000px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      padding: 50px 20px;
+      max-width: 1100px;
       margin: auto;
     }
     .card {
-      background: #f5f7fb;
-      border: 2px solid #e0e7ff;
-      border-radius: 16px;
-      padding: 25px;
+      background: #ffffff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 30px 20px;
       text-align: center;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
     .card:hover {
-      transform: translateY(-5px);
-      background: #3f83f8;
-      color: #fff;
+      transform: translateY(-6px);
+      border-color: #34d399;
+      box-shadow: 0 6px 16px rgba(52, 211, 153, 0.2);
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #065f46;
+      margin-bottom: 10px;
     }
     .card a {
       display: block;
-      margin-top: 10px;
+      font-size: 16px;
       font-weight: 600;
-      color: inherit;
+      color: #065f46;
       text-decoration: none;
-    }
-    .card img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      background: white;
     }
     .back-button {
       display: inline-block;
-      margin: 20px auto;
+      margin: 30px auto 0;
       text-align: center;
-      padding: 12px 24px;
-      background: #3f83f8;
+      padding: 12px 26px;
+      background: #10b981;
       color: #fff;
       font-weight: 600;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
-      transition: 0.3s;
+      transition: background 0.3s ease;
     }
     .back-button:hover {
-      background: #2456c5;
+      background: #059669;
     }
     footer {
       text-align: center;
-      padding: 30px;
-      color: #888;
+      padding: 40px 20px;
+      color: #9ca3af;
       font-size: 14px;
     }
   </style>
@@ -95,24 +94,32 @@
 
   <div class="grid">
     <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9HBBZhvqwxqYsZgLRNH4xfPR7XEg4RvmHg&s" alt="IDFC Logo">
-      <a href="https://salesforce.idfcfirstbank.com" target="_blank">IDFC Salesforce</a>
+      <div class="card-title">IDFC First Bank</div>
+      <a href="https://salesforce.idfcfirstbank.com" target="_blank">Visit Salesforce Portal</a>
     </div>
     <div class="card">
-      <img src="https://ilens.icicibank.com/login/image/logo_icici_ilens.png" alt="iLens Logo">
-      <a href="https://ilensportal.com" target="_blank">iLens Portal</a>
+      <div class="card-title">iLens – ICICI</div>
+      <a href="https://ilens.icicibank.com" target="_blank">Visit iLens Portal</a>
     </div>
     <div class="card">
-      <img src="https://www.crackerandrush.com/wp-content/uploads/2023/06/jfb-logo-scaled.webp" alt="Jana Logo">
-      <a href="https://jana.lendsperfect.com" target="_blank">Jana Bank – LendsPerfect</a>
+      <div class="card-title">Jana Small Finance Bank</div>
+      <a href="https://jana.lendsperfect.com" target="_blank">Visit LendsPerfect</a>
     </div>
     <div class="card">
-      <img src="https://storage.googleapis.com/realtyplusmag-news-photo/news-photo/Aditya-Birla-Housing-Finance.jpg" alt="ABHFL LLP">
-      <a href="https://abhfl-llp.com" target="_blank">ABHFL LLP</a>
+      <div class="card-title">ABHFL LLP</div>
+      <a href="https://online.adityabirlacapital.com/ABHFL/LoanApplication/Login" target="_blank">Visit ABHFL LLP Portal</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Piramal Finance</div>
+      <a href="https://www.piramalfinance.com/pd/login" target="_blank">Visit Piramal Portal</a>
+    </div>
+    <div class="card">
+      <div class="card-title">PNB Housing Finance</div>
+      <a href="https://uconnect.pnbhousing.com/STS/Account/Login?ReturnUrl=%2FSTS%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPnbhfl.Upp.Web%26redirect_uri%3Dhttps%253A%252F%252Fuconnect.pnbhousing.com%252FWebApp%252F%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%26scope%3Dmobiliteam.services%2520pnbhfl.upp.services%2520offline_access%2520openid%2520profile%2520api.user%2520pnbhfl.upp.api.odata%26state%3DOpenIdConnect.AuthenticationProperties%253D9_9cDzHh23azCb1EApIUyo76BnQ_CZMl8rkDFJkALBlhv0620qQVNlQRS_iRvoolbblnbbAuSkSQASXDxXX1quN9j9jbuz00Pf5TcW1ZBFQt9UtpECwWsa2cGWXJ5SemHmJ-c7sZhHOoznIsmJXxJytCQ8B7jkHbb2GGlndPmEPWsTig9Zgff3xm6KwJh2oSrLg2y85CSE8CjYX0X1OSzuhnLYEqGDmV3Cog_R22BhUuz_JupbRjvX6pzU3W9VxlRH0Oju73yYXyXROADwMwkQ%26nonce%3D638862242253946726.NTg2MThkOGItNTk3ZC00MGJhLTg4ODMtM2FjZjllMzI2MGZkNGIzZDBhMWYtOTU4Ni00OGRmLThmYWMtOWMxYzdmY2YwMWVl" target="_blank">Visit PNB Portal</a>
     </div>
   </div>
 
-  <div style="text-align: center; margin-top: 20px;">
+  <div style="text-align: center;">
     <a href="index.html" class="back-button">⬅ Back to Home</a>
   </div>
 
