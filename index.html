@@ -3,77 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VerifyX by Aakash - Pro Edition</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="VerifyX Logo" />
-    <h1>VerifyX</h1>
-    <p class="subtitle">by Aakash — Digital Trust Toolkit</p>
-  </header>
+  <title>VerifyX - Smart Verification Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  <nav>
-    <ul>
-      <li><a href="#doctors">Doctors</a></li>
-      <li><a href="#contractors">Contractors</a></li>
-      <li><a href="#rera">RERA</a></li>
-      <li><a href="#labour">Labour</a></li>
-      <li><a href="#others">Others</a></li>
-    </ul>
+    .tilt-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .tilt-card:hover {
+      transform: rotateY(6deg) rotateX(4deg) scale(1.04);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+    }
+
+    .glass {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .fab {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #6366f1;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 50;
+    }
+
+    .fab:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="w-full px-6 py-4 flex justify-between items-center bg-transparent backdrop-blur-md z-50">
+    <div class="text-2xl font-bold">🔐 VerifyX</div>
+    <div class="space-x-6 text-sm hidden sm:flex">
+      <a href="#verify" class="hover:underline">Verify</a>
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
   </nav>
 
-  <main>
-    <section id="doctors">
-      <h2>Doctors</h2>
-      <div class="container">
-        <div class="card"><h3>MMC (Maharashtra)</h3><a href="https://maharashtramedicalcouncil.in/frmrmplist.aspx" target="_blank">Visit</a></div>
-        <div class="card"><h3>TSMC (Telangana)</h3><a href="https://regonlinetsmc.in/doctorsearch" target="_blank">Visit</a></div>
-        <div class="card"><h3>NMC India</h3><a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Visit</a></div>
-      </div>
-    </section>
+  <!-- Hero -->
+  <header class="text-center mt-16 mb-12 px-4" data-aos="fade-down">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Your Trusted Verification Partner</h1>
+    <p class="text-lg text-gray-300 mb-6">Fast, secure, and reliable checks for professionals & businesses</p>
 
-    <section id="contractors">
-      <h2>Contractors</h2>
-      <div class="container">
-        <div class="card"><h3>eROC Maharashtra</h3><a href="https://eroc.emahapwd.com" target="_blank">Visit</a></div>
-        <div class="card"><h3>Tamil Nadu PWD</h3><a href="https://ipms.tnrd.tn.gov.in/project/forms/public/ContractorRegistration.php" target="_blank">Visit</a></div>
-        <div class="card"><h3>Gujarat R&B</h3><a href="https://rnb.gujarat.gov.in/pages/Contents/Contractors" target="_blank">Visit</a></div>
-      </div>
-    </section>
+    <!-- Search Box -->
+    <div class="max-w-xl mx-auto flex gap-2">
+      <input type="text" placeholder="Search GST / Udyam / Doctor ID..." class="w-full px-4 py-2 rounded-xl bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      <button class="bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-xl font-medium">Search</button>
+    </div>
+  </header>
 
-    <section id="rera">
-      <h2>RERA</h2>
-      <div class="container">
-        <div class="card"><h3>Maharashtra</h3><a href="https://maharera.maharashtra.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Tamil Nadu</h3><a href="https://www.rera.tn.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Gujarat</h3><a href="https://gujrera.gujarat.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Karnataka</h3><a href="https://rera.karnataka.gov.in/" target="_blank">Visit</a></div>
-      </div>
-    </section>
+  <!-- Services Grid -->
+  <section id="services" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl px-6 mx-auto" data-aos="fade-up">
 
-    <section id="labour">
-      <h2>Labour / CLRA</h2>
-      <div class="container">
-        <div class="card"><h3>Gujarat Labour</h3><a href="https://labour.gujarat.gov.in/e-shramseva2.htm" target="_blank">Visit</a></div>
-        <div class="card"><h3>CLRA India</h3><a href="https://clra.labour.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Seva Sindhu</h3><a href="https://sevasindhu.karnataka.gov.in/" target="_blank">Visit</a></div>
-      </div>
-    </section>
+    <div class="tilt-card glass rounded-3xl p-6 shadow-lg">
+      <h2 class="text-xl font-semibold mb-2">🏢 Business Verification</h2>
+      <p class="text-sm text-gray-200">Instantly check GST, MSME (Udyam), Shop Act & Company registrations via official APIs.</p>
+    </div>
 
-    <section id="others">
-      <h2>Business Tools</h2>
-      <div class="container">
-        <div class="card"><h3>GST</h3><a href="https://services.gst.gov.in/services/searchtp" target="_blank">Visit</a></div>
-        <div class="card"><h3>Udyam</h3><a href="https://udyamregistration.gov.in/udyam_verify.aspx" target="_blank">Visit</a></div>
-        <div class="card"><h3>MCA</h3><a href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do" target="_blank">Visit</a></div>
-        <div class="card"><h3>PAN</h3><a href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/verifyYourPAN" target="_blank">Visit</a></div>
-      </div>
-    </section>
-  </main>
+    <div class="tilt-card glass rounded-3xl p-6 shadow-lg">
+      <h2 class="text-xl font-semibold mb-2">👩‍⚕️ Professional Credentials</h2>
+      <p class="text-sm text-gray-200">Verify doctors (NMC), lawyers (Bar Council), engineers, architects & more.</p>
+    </div>
 
-  <footer>
-    <p>© 2025 VerifyX by Aakash — Built with ❤️ by Sara</p>
+    <div class="tilt-card glass rounded-3xl p-6 shadow-lg">
+      <h2 class="text-xl font-semibold mb-2">📄 Report Integration</h2>
+      <p class="text-sm text-gray-200">Plug verified data into VAK reports, internal checks, and third-party compliance tools.</p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="mt-24 mb-10 text-center text-sm text-gray-400" data-aos="fade-up">
+    © 2025 VerifyX. Built with 💙 | <a href="#" class="underline">Privacy</a> · <a href="#" class="underline">Terms</a>
   </footer>
+
+  <!-- Floating Action Button -->
+  <button class="fab" onclick="window.location.href='#verify'">Start Verifying</button>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800
+    });
+  </script>
 </body>
 </html>
