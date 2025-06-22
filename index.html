@@ -3,144 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VerifyX - Portals</title>
+  <title>VerifyX – Business & Portal Verifications</title>
+  
+  <!-- Fonts & AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- Custom Styles -->
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9fafa;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: 800;
+      max-width: 800px;
       margin: auto;
     }
 
-    h2 {
-      color: #1e1e2f;
-      font-size: 28px;
-      margin-bottom: 20px;
-      border-left: 5px solid #6c63ff;
-      padding-left: 15px;
+    header h1 span {
+      color: #3f83f8;
     }
 
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+    header p {
+      color: #555;
+      max-width: 600px;
+      margin: 20px auto;
     }
 
-    .verify-button {
-      background: #ffffff;
-      border: 2px solid #6c63ff;
-      padding: 16px 20px;
-      border-radius: 12px;
-      font-size: 16px;
-      text-align: center;
-      font-weight: 600;
-      color: #6c63ff;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(108, 99, 255, 0.08);
-      text-decoration: none;
+    .cta-buttons {
+      margin-top: 30px;
     }
 
-    .verify-button:hover {
-      background: #6c63ff;
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: #3f83f8;
       color: #fff;
-      transform: translateY(-4px);
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta-buttons a:hover {
+      background: #2f6fe0;
     }
 
     #search-section {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px 10px;
     }
 
     #searchInput {
       width: 80%;
-      max-width: 500px;
-      padding: 14px 18px;
+      max-width: 480px;
+      padding: 14px 20px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
       font-size: 16px;
-      border: 2px solid #6c63ff;
-      border-radius: 10px;
       outline: none;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     #searchInput:focus {
-      border-color: #4e47c6;
-      box-shadow: 0 0 10px rgba(108, 99, 255, 0.2);
+      border-color: #3f83f8;
+      box-shadow: 0 0 8px rgba(63, 131, 248, 0.2);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      border-left: 4px solid #3f83f8;
+      padding-left: 12px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .verify-button {
+      background: #f5f7fa;
+      border: 2px solid #e0e0e0;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .verify-button:hover {
+      background: #3f83f8;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #888;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Welcome Section -->
-  <section id="welcome" data-aos="fade-up">
-    <h2>Welcome to VerifyX</h2>
-    <p>Your one-stop verification hub for businesses, professionals & banking portals. Access official sites with ease.</p>
-  </section>
+  <!-- Hero Section -->
+  <header data-aos="fade-up">
+    <h1>Access <span>Verified Resources</span> Across Businesses & Banks</h1>
+    <p>Instant access to government and financial verification portals. All links organized for your ease & clarity.</p>
+    <div class="cta-buttons">
+      <a href="#verification-links">Start Verifying</a>
+      <a href="#bank-links">Go to Bank Portals</a>
+    </div>
+  </header>
 
   <!-- Search Bar -->
   <section id="search-section" data-aos="fade-up">
-    <h2>Search Portals</h2>
-    <input type="text" id="searchInput" placeholder="Search for any portal..." />
+    <input type="text" id="searchInput" placeholder="Search any portal e.g., GST, Doctor, IDFC..." />
   </section>
 
-  <!-- Verification Links Section -->
+  <!-- Verification Links -->
   <section id="verification-links" data-aos="fade-up">
-    <h2>🔎 Links for Verifications</h2>
-
-    <!-- Business Verifications -->
+    <h2>🔍 Business & Profession Verifications</h2>
     <div class="button-grid">
-      <a class="verify-button searchable-button" href="https://www.gst.gov.in/" target="_blank">GST Verification</a>
-      <a class="verify-button searchable-button" href="https://udyamregistration.gov.in/" target="_blank">UDYAM Registration</a>
-      <a class="verify-button searchable-button" href="https://foscos.fssai.gov.in/" target="_blank">FSSAI License</a>
-      <a class="verify-button searchable-button" href="#">Other Registrations</a>
-    </div>
+      <!-- Business -->
+      <a class="verify-button searchable-button" href="https://services.gst.gov.in/services/searchtp" target="_blank">GST Verification</a>
+      <a class="verify-button searchable-button" href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">UDYAM Verification</a>
+      <a class="verify-button searchable-button" href="https://foodlicensing.fssai.gov.in/cmsweb/TrackFBO.aspx" target="_blank">FSSAI License Status</a>
+      <a class="verify-button searchable-button" href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do" target="_blank">Company CIN/LLP Lookup</a>
+      <a class="verify-button searchable-button" href="https://www.dgft.gov.in/CP/?opt=iec-search" target="_blank">IEC Code (DGFT)</a>
 
-    <!-- Profession Verifications -->
-    <div class="button-grid" style="margin-top: 40px;">
-      <a class="verify-button searchable-button" href="https://www.nmc.org.in" target="_blank">Doctor (NMC)</a>
-      <a class="verify-button searchable-button" href="https://www.barcouncilofindia.org/" target="_blank">Lawyer (Bar Council)</a>
-      <a class="verify-button searchable-button" href="#">Contractor (CPWD)</a>
-      <a class="verify-button searchable-button" href="#">Surveyor (IRDAI)</a>
-      <a class="verify-button searchable-button" href="#">Add More...</a>
+      <!-- Professionals -->
+      <a class="verify-button searchable-button" href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Doctor (NMC)</a>
+      <a class="verify-button searchable-button" href="https://www.barcouncilofindia.org/about/about-the-bar-council-of-india/list-of-state-bar-councils/" target="_blank">Lawyer (Bar Councils)</a>
+      <a class="verify-button searchable-button" href="https://contractor.mahapwd.com/ContractorSearch.aspx" target="_blank">Contractor (PWD Maharashtra)</a>
+      <a class="verify-button searchable-button" href="https://www.irda.gov.in/intermediaries-surveyors" target="_blank">Surveyor (IRDAI)</a>
     </div>
   </section>
 
-  <!-- Bank Portals Section -->
+  <!-- Bank Portals -->
   <section id="bank-links" data-aos="fade-up">
-    <h2>🏦 Links for Bank & Lending Portals</h2>
+    <h2>🏦 Bank & Lending Partner Portals</h2>
     <div class="button-grid">
       <a class="verify-button searchable-button" href="https://salesforce.idfcfirstbank.com" target="_blank">IDFC Salesforce</a>
       <a class="verify-button searchable-button" href="https://ilensportal.com" target="_blank">iLens Portal</a>
-      <a class="verify-button searchable-button" href="https://jana.lendsperfect.com" target="_blank">Jana Bank (LendsPerfect)</a>
+      <a class="verify-button searchable-button" href="https://jana.lendsperfect.com" target="_blank">Jana Bank – LendsPerfect</a>
       <a class="verify-button searchable-button" href="https://abhfl-llp.com" target="_blank">ABHFL LLP</a>
-      <a class="verify-button searchable-button" href="#">Add More Portals</a>
     </div>
   </section>
 
-  <!-- AOS Script -->
+  <footer>
+    © 2025 VerifyX. All rights reserved.
+  </footer>
+
+  <!-- AOS & Search Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
 
-    // Search functionality
+    // Live Search
     const searchInput = document.getElementById('searchInput');
     const buttons = document.querySelectorAll('.searchable-button');
 
     searchInput.addEventListener('keyup', function () {
       const filter = this.value.toLowerCase();
-
       buttons.forEach(button => {
         const text = button.textContent.toLowerCase();
         if (text.includes(filter)) {
@@ -151,5 +202,6 @@
       });
     });
   </script>
+
 </body>
 </html>
