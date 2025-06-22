@@ -27,11 +27,6 @@
       font-size: 16px;
       color: #4b5563;
     }
-    .illustration {
-      max-width: 240px;
-      margin: 30px auto;
-      display: block;
-    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -54,12 +49,11 @@
       border-color: #34d399;
       box-shadow: 0 6px 16px rgba(52, 211, 153, 0.2);
     }
-    .card img {
-      width: 90px;
-      height: auto;
-      margin-bottom: 18px;
-      border-radius: 8px;
-      background-color: #fff;
+    .card-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #065f46;
+      margin-bottom: 10px;
     }
     .card a {
       display: block;
@@ -96,44 +90,43 @@
   <header>
     <h1>Business & Profession Verifications</h1>
     <p>Access government-approved verification portals instantly</p>
-    <img class="illustration" src="https://cdn-icons-png.flaticon.com/512/4206/4206233.png" alt="Business Illustration">
   </header>
 
   <div class="grid">
     <div class="card">
-      <img src="https://services.gst.gov.in/static/images/gstindia-logo.png" alt="GST">
+      <div class="card-title">GST</div>
       <a href="https://services.gst.gov.in/services/searchtp" target="_blank">GST Verification</a>
     </div>
     <div class="card">
-      <img src="https://udyamregistration.gov.in/images/Logo.png" alt="UDYAM">
+      <div class="card-title">UDYAM</div>
       <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">UDYAM Verification</a>
     </div>
     <div class="card">
-      <img src="https://foodlicensing.fssai.gov.in/cmsweb/images/logo.png" alt="FSSAI">
+      <div class="card-title">FSSAI</div>
       <a href="https://foodlicensing.fssai.gov.in/cmsweb/TrackFBO.aspx" target="_blank">FSSAI License Status</a>
     </div>
     <div class="card">
-      <img src="https://mca.gov.in/content/dam/mca/images/mca-logo.png" alt="CIN">
+      <div class="card-title">CIN/LLP</div>
       <a href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do" target="_blank">Company CIN/LLP Lookup</a>
     </div>
     <div class="card">
-      <img src="https://www.dgft.gov.in/resources/images/dgft-logo.png" alt="IEC">
+      <div class="card-title">IEC</div>
       <a href="https://www.dgft.gov.in/CP/?opt=iec-search" target="_blank">IEC Code (DGFT)</a>
     </div>
     <div class="card">
-      <img src="https://www.nmc.org.in/images/logo.png" alt="Doctor">
+      <div class="card-title">DOCTOR</div>
       <a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Doctor (NMC)</a>
     </div>
     <div class="card">
-      <img src="https://www.barcouncilofindia.org/wp-content/themes/bar/images/logo.png" alt="Lawyer">
+      <div class="card-title">LAWYER</div>
       <a href="https://www.barcouncilofindia.org/about/about-the-bar-council-of-india/list-of-state-bar-councils/" target="_blank">Lawyer (Bar Councils)</a>
     </div>
     <div class="card">
-      <img src="https://contractor.mahapwd.com/images/pwd_logo.png" alt="Contractor">
+      <div class="card-title">CONTRACTOR</div>
       <a href="https://contractor.mahapwd.com/ContractorSearch.aspx" target="_blank">Contractor (PWD Maharashtra)</a>
     </div>
     <div class="card">
-      <img src="https://www.irda.gov.in/images/logo.png" alt="Surveyor">
+      <div class="card-title">SURVEYOR</div>
       <a href="https://www.irda.gov.in/intermediaries-surveyors" target="_blank">Surveyor (IRDAI)</a>
     </div>
   </div>
