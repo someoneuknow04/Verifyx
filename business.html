@@ -10,8 +10,8 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9ff;
-      color: #111;
+      background: #f8fafc;
+      color: #1f2937;
     }
     header {
       text-align: center;
@@ -20,62 +20,80 @@
     h1 {
       font-size: 34px;
       font-weight: 800;
-      margin-bottom: 10px;
-      color: #1f2937;
+      color: #111827;
     }
     header p {
       font-size: 16px;
-      color: #4b5563;
+      color: #6b7280;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 32px;
-      padding: 50px 20px;
+      padding: 40px 20px;
       max-width: 1100px;
       margin: auto;
     }
     .card {
-      background: #ffffff;
+      background: #fff;
       border: 1.5px solid #e5e7eb;
       border-radius: 18px;
       padding: 30px 20px;
       text-align: center;
-      transition: all 0.3s ease;
+      transition: 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
     .card:hover {
       transform: translateY(-6px);
-      border-color: #34d399;
-      box-shadow: 0 6px 16px rgba(52, 211, 153, 0.2);
+      border-color: #3b82f6;
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
     }
     .card-title {
       font-size: 20px;
       font-weight: 800;
-      color: #065f46;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      color: #1d4ed8;
     }
     .card a {
       display: block;
       font-size: 16px;
       font-weight: 600;
-      color: #065f46;
+      color: #1e40af;
       text-decoration: none;
+    }
+    details {
+      margin: 20px auto;
+      max-width: 700px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+    summary {
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #111827;
+    }
+    details a {
+      display: block;
+      margin-top: 10px;
+      color: #2563eb;
+      font-weight: 500;
     }
     .back-button {
       display: inline-block;
-      margin: 30px auto 0;
-      text-align: center;
+      margin: 30px auto 40px;
       padding: 12px 26px;
-      background: #10b981;
+      background: #3b82f6;
       color: #fff;
       font-weight: 600;
       border-radius: 10px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      text-align: center;
     }
     .back-button:hover {
-      background: #059669;
+      background: #2563eb;
     }
     footer {
       text-align: center;
@@ -86,50 +104,67 @@
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Business & Profession Verifications</h1>
-    <p>Access government-approved verification portals instantly</p>
+    <h1>Business & Professional Verifications</h1>
+    <p>Quick access to official government portals for verifying business identities and credentials</p>
   </header>
 
   <div class="grid">
     <div class="card">
       <div class="card-title">GST</div>
-      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">GST Verification</a>
+      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">Visit GST Portal</a>
     </div>
     <div class="card">
-      <div class="card-title">UDYAM</div>
-      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">UDYAM Verification</a>
+      <div class="card-title">UDYAM / MSME</div>
+      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify Udyam</a>
     </div>
     <div class="card">
-      <div class="card-title">FSSAI</div>
-      <a href="https://foodlicensing.fssai.gov.in/cmsweb/TrackFBO.aspx" target="_blank">FSSAI License Status</a>
-    </div>
-    <div class="card">
-      <div class="card-title">CIN/LLP</div>
-      <a href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do" target="_blank">Company CIN/LLP Lookup</a>
+      <div class="card-title">FSSAI (FoSCoS)</div>
+      <a href="https://foscos.fssai.gov.in/" target="_blank">Visit FSSAI Portal</a>
     </div>
     <div class="card">
       <div class="card-title">IEC</div>
-      <a href="https://www.dgft.gov.in/CP/?opt=iec-search" target="_blank">IEC Code (DGFT)</a>
+      <a href="https://www.dgft.gov.in/CP/?opt=iec-profile" target="_blank">Check IEC Code</a>
     </div>
     <div class="card">
-      <div class="card-title">DOCTOR</div>
-      <a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Doctor (NMC)</a>
+      <div class="card-title">IRDA (Insurance)</div>
+      <a href="https://www.irdai.gov.in/" target="_blank">Visit IRDAI</a>
     </div>
     <div class="card">
-      <div class="card-title">LAWYER</div>
-      <a href="https://www.barcouncilofindia.org/about/about-the-bar-council-of-india/list-of-state-bar-councils/" target="_blank">Lawyer (Bar Councils)</a>
+      <div class="card-title">ICAI (CA Verification)</div>
+      <a href="https://www.icai.org/post/members-directory" target="_blank">Verify Chartered Accountant</a>
     </div>
     <div class="card">
-      <div class="card-title">CONTRACTOR</div>
-      <a href="https://contractor.mahapwd.com/ContractorSearch.aspx" target="_blank">Contractor (PWD Maharashtra)</a>
+      <div class="card-title">ICSI (CS Verification)</div>
+      <a href="https://www.icsi.edu/member-search/" target="_blank">Verify Company Secretary</a>
     </div>
     <div class="card">
-      <div class="card-title">SURVEYOR</div>
-      <a href="https://www.irda.gov.in/intermediaries-surveyors" target="_blank">Surveyor (IRDAI)</a>
+      <div class="card-title">ICMAI (Cost Accountant)</div>
+      <a href="https://eicmai.in/MMS/MemberSearch.aspx" target="_blank">Verify Cost Accountant</a>
     </div>
   </div>
+
+  <details>
+    <summary>Doctor Verification (State-wise)</summary>
+    <a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">National Medical Register (NMC)</a>
+    <a href="https://www.maharashtramedicalcouncil.in/" target="_blank">Maharashtra Medical Council</a>
+    <!-- Add more states -->
+  </details>
+
+  <details>
+    <summary>Lawyer Verification (State-wise)</summary>
+    <a href="https://www.barcouncilofindia.org/roll-of-advocates/" target="_blank">Bar Council of India</a>
+    <a href="https://www.barcouncilmah.com/" target="_blank">Bar Council of Maharashtra & Goa</a>
+    <!-- Add more states -->
+  </details>
+
+  <details>
+    <summary>Trade License Verification (City-wise)</summary>
+    <a href="https://portal.mcgm.gov.in/irj/portal/anonymous/home" target="_blank">Mumbai (BMC)</a>
+    <a href="https://mcdonline.nic.in/" target="_blank">Delhi (MCD)</a>
+    <a href="https://bbmptax.karnataka.gov.in/" target="_blank">Bangalore (BBMP)</a>
+    <!-- Add more cities -->
+  </details>
 
   <div style="text-align: center;">
     <a href="index.html" class="back-button">⬅ Back to Home</a>
