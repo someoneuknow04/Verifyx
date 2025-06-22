@@ -3,92 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VerifyX – Choose Category</title>
-
-  <!-- Fonts & AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>VerifyX – Choose Path</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
       font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
-      scroll-behavior: smooth;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
+    .container {
+      display: flex;
+      height: 100vh;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 32px;
-      font-weight: 800;
-    }
-
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .verify-button {
-      background: #f5f7fa;
-      border: 2px solid #e0e0e0;
-      padding: 30px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #333;
-      text-align: center;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .verify-button:hover {
-      background: #3f83f8;
+    .half {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       color: white;
-      transform: translateY(-3px);
+      padding: 40px;
+      transition: 0.3s ease;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #888;
+    .left {
+      background: #2e65f3;
+    }
+
+    .right {
+      background: #66c8f2;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background: white;
+      color: #2e65f3;
+      font-weight: 700;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #f0f4ff;
+      transform: translateY(-2px);
+    }
+
+    .subtext {
       font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .subtext a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .logo-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      color: #2e65f3;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    @media(max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .half {
+        width: 100%;
+        padding: 60px 20px;
+      }
+      .logo-center {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Category Interface -->
-  <section id="category-cards" data-aos="fade-up">
-    <h1>Choose a Verification Category</h1>
-    <div class="button-grid">
-      <a href="business.html" class="verify-button">
-        <span style="font-size: 22px; font-weight: 700;">📄 Business Verification</span><br />
-        <span style="font-size: 14px; color: #555;">Instant access to government & business verification portals</span>
-      </a>
-      <a href="bank.html" class="verify-button">
-        <span style="font-size: 22px; font-weight: 700;">🏦 Bank Portals</span><br />
-        <span style="font-size: 14px; color: #555;">Instant access to your bank’s sales & partner portals</span>
-      </a>
+  <div class="container">
+    <!-- Left: Business Verifications -->
+    <div class="half left">
+      <h2>📄 I'm here for Business Verification</h2>
+      <a href="business.html" class="cta-button">Start Verifying</a>
+      <p class="subtext">Need help? <a href="#">Contact Support</a></p>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 VerifyX. All rights reserved.
-  </footer>
+    <!-- Center Logo Box -->
+    <div class="logo-center">VerifyX</div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
+    <!-- Right: Bank Portals -->
+    <div class="half right">
+      <h2>🏦 I'm here for Bank Portals</h2>
+      <a href="bank.html" class="cta-button">Go to Bank Portals</a>
+      <p class="subtext">Need access? <a href="#">Request Link</a></p>
+    </div>
+  </div>
 
 </body>
 </html>
