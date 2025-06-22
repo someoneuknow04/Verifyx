@@ -23,33 +23,42 @@
       margin-bottom: 10px;
     }
     .illustration {
-      max-width: 300px;
+      max-width: 280px;
       margin: 20px auto;
+      display: block;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    .button {
-      background: #f5f7fa;
-      border: 2px solid #e0e0e0;
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #333;
+    .card {
+      background: #f0f8ff;
+      border: 2px solid #dbeafe;
+      border-radius: 16px;
+      padding: 25px;
       text-align: center;
-      text-decoration: none;
-      transition: all 0.25s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-    .button:hover {
+    .card:hover {
+      transform: translateY(-5px);
       background: #3f83f8;
-      color: white;
-      transform: translateY(-3px);
+      color: #fff;
+    }
+    .card a {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: inherit;
+      text-decoration: none;
+    }
+    .card img {
+      width: 80px;
+      margin-bottom: 15px;
     }
     footer {
       text-align: center;
@@ -64,14 +73,26 @@
   <header>
     <h1>Bank & Lending Partner Portals</h1>
     <p>Quick access to portals of financial institutions</p>
-    <img class="illustration" src="https://cdn-icons-png.flaticon.com/512/4149/4149744.png" alt="Bank Illustration">
+    <img class="illustration" src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Bank Illustration">
   </header>
 
   <div class="grid">
-    <a class="button" href="https://salesforce.idfcfirstbank.com" target="_blank">IDFC Salesforce</a>
-    <a class="button" href="https://ilensportal.com" target="_blank">iLens Portal</a>
-    <a class="button" href="https://jana.lendsperfect.com" target="_blank">Jana Bank – LendsPerfect</a>
-    <a class="button" href="https://abhfl-llp.com" target="_blank">ABHFL LLP</a>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="IDFC Logo">
+      <a href="https://salesforce.idfcfirstbank.com" target="_blank">IDFC Salesforce</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2744/2744831.png" alt="iLens Logo">
+      <a href="https://ilensportal.com" target="_blank">iLens Portal</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/6485/6485634.png" alt="Jana Logo">
+      <a href="https://jana.lendsperfect.com" target="_blank">Jana Bank – LendsPerfect</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3448/3448445.png" alt="ABHFL LLP">
+      <a href="https://abhfl-llp.com" target="_blank">ABHFL LLP</a>
+    </div>
   </div>
 
   <footer>
