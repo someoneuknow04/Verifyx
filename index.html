@@ -2,91 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VerifyX — Digital Trust Toolkit</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VerifyX - Portals</title>
+
+  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
   <style>
-    html {
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafa;
+      color: #333;
       scroll-behavior: smooth;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #1e1e2f;
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-left: 5px solid #6c63ff;
+      padding-left: 15px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .verify-button {
+      background: #ffffff;
+      border: 2px solid #6c63ff;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      text-align: center;
+      font-weight: 600;
+      color: #6c63ff;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(108, 99, 255, 0.08);
+      text-decoration: none;
+    }
+
+    .verify-button:hover {
+      background: #6c63ff;
+      color: #fff;
+      transform: translateY(-4px);
+    }
+
+    #search-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #searchInput {
+      width: 80%;
+      max-width: 500px;
+      padding: 14px 18px;
+      font-size: 16px;
+      border: 2px solid #6c63ff;
+      border-radius: 10px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    #searchInput:focus {
+      border-color: #4e47c6;
+      box-shadow: 0 0 10px rgba(108, 99, 255, 0.2);
     }
   </style>
 </head>
-
 <body>
-  <header data-aos="fade-down">
-    <img src="logo.png" alt="VerifyX Logo" title="VerifyX" />
-    <h1>VerifyX</h1>
-    <p class="subtitle">by Aakash — Digital Trust Toolkit</p>
-  </header>
 
-  <nav data-aos="fade-down" data-aos-delay="100">
-    <ul>
-      <li><a href="#doctors">Doctors</a></li>
-      <li><a href="#contractors">Contractors</a></li>
-      <li><a href="#rera">RERA</a></li>
-      <li><a href="#labour">Labour</a></li>
-      <li><a href="#others">Others</a></li>
-    </ul>
-  </nav>
+  <!-- Welcome Section -->
+  <section id="welcome" data-aos="fade-up">
+    <h2>Welcome to VerifyX</h2>
+    <p>Your one-stop verification hub for businesses, professionals & banking portals. Access official sites with ease.</p>
+  </section>
 
-  <main>
-    <section id="doctors" data-aos="fade-up">
-      <h2>Doctors</h2>
-      <div class="container">
-        <div class="card"><h3>MMC (Maharashtra)</h3><a href="https://maharashtramedicalcouncil.in/frmrmplist.aspx" target="_blank">Visit</a></div>
-        <div class="card"><h3>TSMC (Telangana)</h3><a href="https://regonlinetsmc.in/doctorsearch" target="_blank">Visit</a></div>
-        <div class="card"><h3>NMC India</h3><a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Visit</a></div>
-      </div>
-    </section>
+  <!-- Search Bar -->
+  <section id="search-section" data-aos="fade-up">
+    <h2>Search Portals</h2>
+    <input type="text" id="searchInput" placeholder="Search for any portal..." />
+  </section>
 
-    <section id="contractors" data-aos="fade-up">
-      <h2>Contractors</h2>
-      <div class="container">
-        <div class="card"><h3>eROC Maharashtra</h3><a href="https://eroc.emahapwd.com" target="_blank">Visit</a></div>
-        <div class="card"><h3>Tamil Nadu PWD</h3><a href="https://ipms.tnrd.tn.gov.in/project/forms/public/ContractorRegistration.php" target="_blank">Visit</a></div>
-        <div class="card"><h3>Gujarat R&B</h3><a href="https://rnb.gujarat.gov.in/pages/Contents/Contractors" target="_blank">Visit</a></div>
-      </div>
-    </section>
+  <!-- Verification Links Section -->
+  <section id="verification-links" data-aos="fade-up">
+    <h2>🔎 Links for Verifications</h2>
 
-    <section id="rera" data-aos="fade-up">
-      <h2>RERA</h2>
-      <div class="container">
-        <div class="card"><h3>Maharashtra</h3><a href="https://maharera.maharashtra.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Tamil Nadu</h3><a href="https://www.rera.tn.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Gujarat</h3><a href="https://gujrera.gujarat.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Karnataka</h3><a href="https://rera.karnataka.gov.in/" target="_blank">Visit</a></div>
-      </div>
-    </section>
+    <!-- Business Verifications -->
+    <div class="button-grid">
+      <a class="verify-button searchable-button" href="https://www.gst.gov.in/" target="_blank">GST Verification</a>
+      <a class="verify-button searchable-button" href="https://udyamregistration.gov.in/" target="_blank">UDYAM Registration</a>
+      <a class="verify-button searchable-button" href="https://foscos.fssai.gov.in/" target="_blank">FSSAI License</a>
+      <a class="verify-button searchable-button" href="#">Other Registrations</a>
+    </div>
 
-    <section id="labour" data-aos="fade-up">
-      <h2>Labour / CLRA</h2>
-      <div class="container">
-        <div class="card"><h3>Gujarat Labour</h3><a href="https://labour.gujarat.gov.in/e-shramseva2.htm" target="_blank">Visit</a></div>
-        <div class="card"><h3>CLRA India</h3><a href="https://clra.labour.gov.in/" target="_blank">Visit</a></div>
-        <div class="card"><h3>Seva Sindhu</h3><a href="https://sevasindhu.karnataka.gov.in/" target="_blank">Visit</a></div>
-      </div>
-    </section>
+    <!-- Profession Verifications -->
+    <div class="button-grid" style="margin-top: 40px;">
+      <a class="verify-button searchable-button" href="https://www.nmc.org.in" target="_blank">Doctor (NMC)</a>
+      <a class="verify-button searchable-button" href="https://www.barcouncilofindia.org/" target="_blank">Lawyer (Bar Council)</a>
+      <a class="verify-button searchable-button" href="#">Contractor (CPWD)</a>
+      <a class="verify-button searchable-button" href="#">Surveyor (IRDAI)</a>
+      <a class="verify-button searchable-button" href="#">Add More...</a>
+    </div>
+  </section>
 
-    <section id="others" data-aos="fade-up">
-      <h2>Business Tools</h2>
-      <div class="container">
-        <div class="card"><h3>GST</h3><a href="https://services.gst.gov.in/services/searchtp" target="_blank">Visit</a></div>
-        <div class="card"><h3>Udyam</h3><a href="https://udyamregistration.gov.in/udyam_verify.aspx" target="_blank">Visit</a></div>
-        <div class="card"><h3>MCA</h3><a href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do" target="_blank">Visit</a></div>
-        <div class="card"><h3>PAN</h3><a href="https://eportal.incometax.gov.in/iec/foservices/#/pre-login/verifyYourPAN" target="_blank">Visit</a></div>
-      </div>
-    </section>
-  </main>
+  <!-- Bank Portals Section -->
+  <section id="bank-links" data-aos="fade-up">
+    <h2>🏦 Links for Bank & Lending Portals</h2>
+    <div class="button-grid">
+      <a class="verify-button searchable-button" href="https://salesforce.idfcfirstbank.com" target="_blank">IDFC Salesforce</a>
+      <a class="verify-button searchable-button" href="https://ilensportal.com" target="_blank">iLens Portal</a>
+      <a class="verify-button searchable-button" href="https://jana.lendsperfect.com" target="_blank">Jana Bank (LendsPerfect)</a>
+      <a class="verify-button searchable-button" href="https://abhfl-llp.com" target="_blank">ABHFL LLP</a>
+      <a class="verify-button searchable-button" href="#">Add More Portals</a>
+    </div>
+  </section>
 
-  <footer data-aos="fade-up">
-    <p>© 2025 VerifyX by Aakash — All rights reserved.</p>
-  </footer>
-
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 600, once: true });
+    AOS.init({ duration: 1000 });
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const buttons = document.querySelectorAll('.searchable-button');
+
+    searchInput.addEventListener('keyup', function () {
+      const filter = this.value.toLowerCase();
+
+      buttons.forEach(button => {
+        const text = button.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          button.style.display = 'block';
+        } else {
+          button.style.display = 'none';
+        }
+      });
+    });
   </script>
 </body>
 </html>
