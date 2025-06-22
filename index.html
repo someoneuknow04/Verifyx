@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VerifyX – Choose Path</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font + AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
     * {
@@ -15,7 +18,8 @@
 
     body, html {
       height: 100%;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Manrope', sans-serif;
+      background-color: #f8f9fc;
     }
 
     .container {
@@ -32,6 +36,7 @@
       color: white;
       padding: 40px;
       transition: 0.3s ease;
+      text-align: center;
     }
 
     .left {
@@ -57,22 +62,13 @@
       font-size: 16px;
       text-decoration: none;
       margin-bottom: 10px;
-      transition: 0.3s;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .cta-button:hover {
       background: #f0f4ff;
       transform: translateY(-2px);
-    }
-
-    .subtext {
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    .subtext a {
-      color: white;
-      text-decoration: underline;
     }
 
     .logo-center {
@@ -90,7 +86,6 @@
       z-index: 1;
     }
 
-    /* Walkthrough button */
     .walkthrough-link {
       position: absolute;
       top: 20px;
@@ -132,20 +127,23 @@
 
   <div class="container">
     <!-- Left: Business Verifications -->
-    <div class="half left">
-      <h2> 🔍 Business Verification</h2>
+    <div class="half left" data-aos="fade-right">
+      <h2>🔍 Business Verification</h2>
       <a href="business.html" class="cta-button">Start Verifying</a>
     </div>
 
     <!-- Center Logo Box -->
-    <div class="logo-center">VerifyX</div>
+    <div class="logo-center" data-aos="zoom-in">VerifyX</div>
 
     <!-- Right: Bank Portals -->
-    <div class="half right">
-      <h2>🏦 Bank Portals </h2>
-      <a href="bank.html" class="cta-button">Go to Bank Portals</a>
+    <div class="half right" data-aos="fade-left">
+      <h2>🏦 Bank Portals</h2>
+      <a href="bank-portals.html" class="cta-button">Go to Bank Portals</a>
     </div>
   </div>
 
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
