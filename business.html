@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VerifyX - Business Verification</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VerifyX – Business Verification</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Manrope', sans-serif;
-      background-color: #f2f4f8;
-      margin: 0;
+      background: linear-gradient(135deg, #eef3ff, #d9e4ff);
+      color: #1e293b;
       padding: 2rem;
+      overflow-x: hidden;
     }
     h1 {
-      color: #2d89ef;
       text-align: center;
+      color: #5e60ce;
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+      position: relative;
+      animation: fadeInDown 0.6s ease;
+    }
+    h1::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 4px;
+      background-color: #5e60ce;
+      margin: 0.5rem auto 0;
+      border-radius: 10px;
     }
     .section {
       max-width: 800px;
-      margin: auto;
-      margin-bottom: 2rem;
+      margin: 2.5rem auto;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.8s ease;
     }
     .section h2 {
-      color: #2f3542;
+      font-size: 1.6rem;
+      color: #1e293b;
+      margin-bottom: 1rem;
+      font-weight: 700;
     }
     ul {
       list-style: none;
@@ -30,25 +59,34 @@
     }
     li a {
       display: block;
-      padding: 0.75rem 1rem;
       background: white;
-      border-radius: 8px;
       margin-bottom: 0.75rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      color: #2f3542;
+      padding: 1rem 1.4rem;
+      border-radius: 14px;
       text-decoration: none;
+      color: #1e293b;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
       font-weight: 500;
-      transition: background 0.3s;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
     li a:hover {
-      background: #e6f0ff;
+      background-color: #edf2ff;
+      transform: translateX(8px);
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Business Verification Links</h1>
+  <h1 data-aos="fade-down">Business Verification</h1>
 
-  <div class="section">
+  <div class="section" data-aos="fade-up" data-aos-delay="100">
     <h2>Documents</h2>
     <ul>
       <li><a href="#">GST Verification</a></li>
@@ -59,7 +97,7 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="section" data-aos="fade-up" data-aos-delay="200">
     <h2>Professionals</h2>
     <ul>
       <li><a href="#">Doctor (State-wise)</a></li>
@@ -70,5 +108,8 @@
       <li><a href="#">Cost Accountant (ICMAI)</a></li>
     </ul>
   </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
