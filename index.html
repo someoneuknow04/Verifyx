@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VerifyX – Sleek Verification Tool</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>VerifyX – Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     * {
@@ -14,124 +14,125 @@
     }
     body {
       font-family: 'Manrope', sans-serif;
-      background: linear-gradient(to bottom right, #f8fbff, #e0e7ff);
+      background: linear-gradient(135deg, #f1f5ff, #e0e7ff);
       color: #1e293b;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      overflow-x: hidden;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 2.5rem;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
       position: sticky;
       top: 0;
-      z-index: 100;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
-    header h1 {
+    .logo {
       font-size: 1.8rem;
       font-weight: 800;
-      color: #5e60ce;
+      color: #4f46e5;
     }
-    .btn {
-      padding: 0.6rem 1.3rem;
-      background-color: #5e60ce;
+    .walkthrough-btn {
+      padding: 0.6rem 1.2rem;
+      background: #4f46e5;
       color: white;
+      border: none;
       border-radius: 12px;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: background 0.3s ease;
     }
-    .btn:hover {
-      background-color: #4c51c6;
-      transform: scale(1.05);
+    .walkthrough-btn:hover {
+      background: #3730a3;
     }
-    .main {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 2rem;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 800px;
-    }
-    h2 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-    .grid {
+    main {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      place-items: center;
+      min-height: 90vh;
+      padding: 2rem;
+      text-align: center;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
-      width: 100%;
+      max-width: 1000px;
+      margin-top: 2rem;
     }
     .card {
-      background: rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(12px);
       padding: 2rem;
       border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      text-decoration: none;
-      color: #1e293b;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
     }
-    .card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.6rem;
+    .card h2 {
+      font-size: 1.4rem;
+      color: #4f46e5;
+      margin-bottom: 1rem;
     }
     .card p {
       font-size: 0.95rem;
       color: #475569;
+      margin-bottom: 1.5rem;
+    }
+    .card a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #4f46e5;
+      color: white;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .card a:hover {
+      background: #3730a3;
     }
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 1rem;
       font-size: 0.85rem;
       color: #94a3b8;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>VerifyX</h1>
-    <a href="walkthrough.html" class="btn">Walkthrough</a>
+  <header data-aos="fade-down">
+    <div class="logo">VerifyX</div>
+    <a href="walkthrough.html" class="walkthrough-btn">Walkthrough</a>
   </header>
 
-  <section class="main" data-aos="fade-up">
-    <div class="container">
-      <h2>What Would You Like to Verify?</h2>
-      <div class="grid">
-        <a href="business.html" class="card" data-aos="zoom-in">
-          <h3>Business Verification</h3>
-          <p>GST, UDYAM, FSSAI, IEC, and more</p>
-        </a>
-        <a href="bank.html" class="card" data-aos="zoom-in">
-          <h3>Bank Portals</h3>
-          <p>Access credit reports and bank tools</p>
-        </a>
+  <main>
+    <div class="card-container" data-aos="zoom-in-up">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h2>Business Verification</h2>
+        <p>Verify registrations like GST, UDYAM, FSSAI, and professionals like Doctors, CAs & more.</p>
+        <a href="business.html">Explore</a>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h2>Bank Portals</h2>
+        <p>Access credit bureau portals, bank statement tools, and analysis platforms.</p>
+        <a href="bank.html">Explore</a>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
-    Made by Someone.
+    Made with ❤️ by Someone.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
