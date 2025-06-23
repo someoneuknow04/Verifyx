@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VerifyX – Business Verification</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
@@ -16,25 +13,30 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background: linear-gradient(to right, #4f46e5, #3b82f6);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 32px;
     }
+
     header p {
       margin: 8px 0 0;
       font-weight: 500;
     }
+
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 40px 20px;
     }
+
     .card {
       background: white;
       border-radius: 16px;
@@ -43,14 +45,17 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-4px);
     }
+
     .card h2 {
       font-size: 20px;
       color: #1e40af;
       margin-bottom: 12px;
     }
+
     .card a {
       display: inline-block;
       margin-top: 10px;
@@ -58,9 +63,11 @@
       font-weight: 600;
       text-decoration: none;
     }
+
     .card a:hover {
       text-decoration: underline;
     }
+
     .back-button {
       display: block;
       margin: 30px auto;
@@ -74,14 +81,17 @@
       font-weight: 600;
       cursor: pointer;
     }
+
     .back-button:hover {
       background: #2563eb;
     }
+
     label {
       font-weight: 600;
       display: block;
       margin-bottom: 8px;
     }
+
     select {
       padding: 8px;
       font-size: 16px;
@@ -89,6 +99,7 @@
       border-radius: 8px;
       border: 1px solid #ccc;
     }
+
     .links-container a {
       display: block;
       margin-top: 12px;
@@ -97,6 +108,7 @@
       text-decoration: none;
       cursor: pointer;
     }
+
     .links-container a:hover {
       text-decoration: underline;
     }
@@ -111,42 +123,29 @@
   <div class="container">
     <div class="card" data-aos="fade-up">
       <h2>GST Verification</h2>
-      <a href="https://services.gst.gov.in/services/searchtp" target="_blank"
-        >Verify GST Number</a
-      >
+      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify GST Number</a>
     </div>
 
     <div class="card" data-aos="fade-up">
       <h2>UDYAM / MSME</h2>
-      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank"
-        >Verify UDYAM/MSME Registration</a
-      >
+      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify UDYAM/MSME Registration</a>
     </div>
 
     <div class="card" data-aos="fade-up">
       <h2>FSSAI (FoSCoS)</h2>
-      <a href="https://foscos.fssai.gov.in/verification" target="_blank"
-        >Verify FSSAI License</a
-      >
+      <a href="https://foscos.fssai.gov.in/verification" target="_blank">Verify FSSAI License</a>
     </div>
 
     <div class="card" data-aos="fade-up">
       <h2>IEC (Import Export Code)</h2>
-      <a href="https://www.dgft.gov.in/CP/" target="_blank"
-        >Verify IEC Details</a
-      >
+      <a href="https://www.dgft.gov.in/CP/" target="_blank">Verify IEC Details</a>
     </div>
 
     <div class="card" data-aos="fade-up">
       <h2>Trade License</h2>
-      <a
-        href="https://www.mcgm.gov.in/irj/portal/anonymous/qltrade"
-        target="_blank"
-        >Search Trade License</a
-      >
+      <a href="https://www.mcgm.gov.in/irj/portal/anonymous/qltrade" target="_blank">Search Trade License</a>
     </div>
 
-    <!-- Doctor Verification Card with dropdown -->
     <div class="card" data-aos="fade-up">
       <h2>Doctor Verification</h2>
       <label for="doctorStateSelect">Select State:</label>
@@ -162,7 +161,6 @@
       <div class="links-container" id="doctorLinks"></div>
     </div>
 
-    <!-- Lawyer Verification Card with dropdown -->
     <div class="card" data-aos="fade-up">
       <h2>Lawyer Verification</h2>
       <label for="lawyerStateSelect">Select State:</label>
@@ -182,6 +180,12 @@
       <h2>Surveyor (IRDA)</h2>
       <a href="https://www.irdai.gov.in/" target="_blank">Verify IRDA Surveyor</a>
     </div>
+
+    <!-- ✅ New IRDAI Surveyor Card -->
+    <div class="card" data-aos="fade-up">
+      <h2>IRDAI Surveyor Verification</h2>
+      <a href="https://surveyors.irdai.gov.in/" target="_blank" rel="noopener noreferrer">Verify IRDAI Licensed Surveyor</a>
+    </div>
   </div>
 
   <a href="index.html" class="back-button" data-aos="fade-up">⬅ Back to Home</a>
@@ -189,9 +193,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
 
-  <script>
     const doctorLinksByState = {
       maharashtra: [
         { text: "Maharashtra Medical Council", url: "https://www.mahmedicalcouncil.in/" },
