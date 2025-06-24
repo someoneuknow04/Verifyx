@@ -1,96 +1,140 @@
-<!DOCTYPE html>
+<!DOCTYPE html>More actions
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VerifyX – Bank Portals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Manrope', sans-serif;
-      background: linear-gradient(135deg, #eef3ff, #d9e4ff);
-      color: #1e293b;
-      padding: 2rem;
-      overflow-x: hidden;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+    header {
+      background: linear-gradient(to right, #0284c7, #0ea5e9);
+      color: white;
+      padding: 60px 20px;
       text-align: center;
-      color: #5e60ce;
-      margin-bottom: 2.5rem;
-      font-size: 2.5rem;
-      font-weight: 800;
-      animation: fadeInDown 0.6s ease;
-      position: relative;
     }
-    h1::after {
-      content: "";
-      display: block;
-      width: 60%;
-      height: 4px;
-      background-color: #5e60ce;
-      margin: 0.5rem auto 0;
-      border-radius: 10px;
+    header h1 {
+      margin: 0;
+      font-size: 32px;
     }
-    .section {
-      max-width: 800px;
-      margin: 2.5rem auto;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(16px);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-      animation: fadeInUp 0.8s ease;
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li a {
-      display: block;
+    .bank-card {
       background: white;
-      margin-bottom: 0.75rem;
-      padding: 1rem 1.4rem;
-      border-radius: 14px;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .bank-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    .bank-card img {
+      max-width: 120px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+      transition: transform 0.3s ease;
+    }
+    .bank-card:hover img {
+      transform: scale(1.05);
+    }
+    .bank-card a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #0ea5e9;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
       text-decoration: none;
-      color: #1e293b;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .bank-card a:hover {
+      background: #0284c7;
+    }
+    .back-button {
+      display: block;
+      margin: 40px auto 20px;
+      background: #0284c7;
+      color: white;
+      text-align: center;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-button:hover {
+      background: #0369a1;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 20px;
       font-weight: 500;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    li a:hover {
-      background-color: #edf2ff;
-      transform: translateX(8px);
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1 data-aos="fade-down">Bank Portals</h1>
 
-  <div class="section" data-aos="fade-up" data-aos-delay="100">
-    <ul>
-      <li><a href="#">CIBIL – Credit Report</a></li>
-      <li><a href="#">Experian – Credit History</a></li>
-      <li><a href="#">CRIF Highmark</a></li>
-      <li><a href="#">Equifax</a></li>
-      <li><a href="#">Bank Statement Analyzer</a></li>
-    </ul>
+  <header data-aos="fade-down">
+    <h1>🏦 Bank Portals</h1>
+    <p>Direct links to partner bank portals. Click to login instantly.</p>
+  </header>
+
+  <div class="container">
+    <div class="bank-card" data-aos="fade-up">
+      <img src="https://ilens.icicibank.com/login/image/logo_icici_ilens.png" alt="ICICI Ilens">
+      <a href="https://ilens.icicibank.com/" target="_blank">ICICI Ilens</a>
+    </div>
+    <div class="bank-card" data-aos="fade-up">
+      <img src="https://www.piramalfinance.com/pd/assets/images/piramal-logo-text.svg" alt="Piramal Finance HF">
+      <a href="https://www.piramalfinance.com/pd/login" target="_blank">Piramal Login</a>
+    </div>
+    <div class="bank-card" data-aos="fade-up">
+      <img src="https://www.crackerandrush.com/wp-content/uploads/2023/06/jfb-logo-scaled.webp" alt="Jana Bank">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Logo_of_Jana_Small_Finance_Bank.jpg" alt="Jana Bank">
+      <a href="https://lendperfect.janabank.com/lendperfect/login" target="_blank">Jana Bank</a>
+    </div>
+    <div class="bank-card" data-aos="fade-up">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7YdCWQHuBbHye0j0w4X3vzqn71etekwXS7A&s" alt="PNB Housing">
+      <a href="https://uconnect.pnbhousing.com/STS/Account/Login" target="_blank">PNB UConnect</a>
+    </div>
+    <div class="bank-card" data-aos="fade-up">
+      <img src="https://static.theprint.in/wp-content/uploads/2023/07/ANI-20230704050504.jpg" alt="IDFC Bank">
+      <a href="https://login.salesforce.com/?locale=in" target="_blank">IDFC Salesforce</a>
+    </div>
+    <div class="bank-card" data-aos="fade-up">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxpZqIBTrSpdhXA0polVayuKyCs0FEVgkyamhf3jCIXhO7cKXFXud-eWOq5muqZC13i-M&usqp=CAU" alt="HFC ICICI">
+      <a href="https://veloct.icicihfc.com/TPLSW/" target="_blank">HFC ICICI</a>
+    </div>
+    <div class="bank-card" data-aos="fade-up">
+      <img src="https://abhfluat.abcscuat.com/-/media/feature/abcl/abfl/sticky-tab-content/abhfl-square.ashx?h=600&w=600&la=en&hash=1B2E2C8833794593FFED1D2141C6356F" alt="ABHFL LLP">
+      <a href="https://finverse.adityabirlacapital.com/auth/login" target="_blank">ABHFL LLP</a>
+    </div>
   </div>
 
+  <a href="index.html" class="back-button" data-aos="fade-up">⬅ Back to Home</a>
+  <footer>Made by Someone</footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
+  <script>AOS.init();</script>
+
 </body>
 </html>
