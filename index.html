@@ -2,95 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VerifyX</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VerifyX – Choose Path</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerifyX - Choose Path</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
     body {
       margin: 0;
       font-family: 'Manrope', sans-serif;
-      display: flex;
-      height: 100vh;
-      background: #f7f7f7;
+      background-color: #f7f9fc;
+      color: #2f3542;
     }
     .container {
+    header {
       display: flex;
-      flex: 1;
+      height: 100vh;
     }
-    .left, .right {
-      flex: 1;
+    .half {
+      width: 50%;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      transition: all 0.3s ease;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 40px;
+      transition: 0.3s ease;
+      padding: 1rem 2rem;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     .left {
-      background-color: #ffffff;
+      background: #2e65f3;
+    header h1 {
+      margin: 0;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #2d89ef;
     }
     .right {
-      background-color: #000000;
-      color: #ffffff;
-    }
-    h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .desc {
-      margin-top: 1rem;
-      font-size: 1rem;
-      max-width: 300px;
-      text-align: center;
-      opacity: 0.8;
-    }
+      background: #66c8f2;
     .btn {
-      margin-top: 2rem;
-      padding: 12px 24px;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
+      background-color: #2d89ef;
+      color: white;
+      padding: 0.5rem 1.2rem;
       border-radius: 8px;
-      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
     }
-    .btn-light {
-      background-color: #000;
-      color: #fff;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    .btn:hover {
+      background-color: #4c6ef5;
     }
-    .btn-dark {
-      background-color: #fff;
-      color: #000;
+    .cta-button {
+      background: white;
+      color: #2e65f3;
+      font-weight: 700;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    .main {
+      display: grid;
+      place-items: center;
+      min-height: 80vh;
+      text-align: center;
+      padding: 2rem;
     }
-    .top-right {
+    .cta-button:hover {
+      background: #f0f4ff;
+      transform: translateY(-2px);
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .logo-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    .card {
+      background: white;
+      color: #2e65f3;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .walkthrough-link {
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: 30px;
+      background: #1d4ed8;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+    .walkthrough-link:hover {
+      background: #2563eb;
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
     }
     footer {
       position: absolute;
-      bottom: 10px;
+      bottom: 15px;
       width: 100%;
       text-align: center;
+      font-size: 14px;
+      color: #64748b;
+      font-weight: 500;
+    }
+    @media(max-width: 768px) {
+      .container { flex-direction: column; }
+      .half { width: 100%; padding: 60px 20px; }
+      .logo-center {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+      }
+      footer {
+        position: static;
+        margin-top: 40px;
+      }
+      padding: 1rem;
       font-size: 0.9rem;
       color: #888;
     }
   </style>
 </head>
 <body>
-  <div class="top-right">
-    <a href="walkthrough.html" class="btn btn-dark">Walkthrough</a>
-  </div>
+  <header>
+    <h1>VerifyX</h1>
+    <a class="btn" href="walkthrough.html">Walkthrough</a>
+  </header>
+
+  <!-- Walkthrough Button -->
+  <a href="walkthrough.html" class="walkthrough-link">🔍 Walkthrough</a>
+
   <div class="container">
-    <div class="left">
-      <h1>Business Verification</h1>
-      <p class="desc">Explore tools to verify businesses across Indian states and industries.</p>
-      <a href="business.html" class="btn btn-light">Enter</a>
+    <!-- Left: Business Verifications -->
+    <div class="half left">
+      <h2>🔍 Business Verification</h2>
+      <a href="business.html" class="cta-button">Start Verifying</a>
     </div>
-    <div class="right">
-      <h1>Bank Portals</h1>
-      <p class="desc">Access quick links to all major bank login and verification portals.</p>
-      <a href="bank.html" class="btn btn-dark">Enter</a>
+
+    <!-- Center Logo -->
+    <div class="logo-center">VerifyX</div>
+
+    <!-- Right: Bank Portals -->
+    <div class="half right">
+      <h2>🏦 Bank Portals</h2>
+      <a href="bank.html" class="cta-button">Go to Bank Portals</a>
+  <section class="main" data-aos="fade-up">
+    <h2>Choose What You Want to Verify</h2>
+    <div class="grid">
+      <a href="business.html" class="card" data-aos="zoom-in">
+        <h3>Business Verification</h3>
+        <p>Verify GST, UDYAM, FSSAI, and more</p>
+      </a>
+      <a href="bank.html" class="card" data-aos="zoom-in">
+        <h3>Bank Portals</h3>
+        <p>Access credit bureau and loan statement tools</p>
+      </a>
     </div>
   </div>
-  <footer>Made with ❤️ by Someone.</footer>
+  </section>
+
+  <footer>Made by Someone</footer>
+  <footer>
+    Made by Someone.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
