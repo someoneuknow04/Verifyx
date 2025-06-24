@@ -2,207 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VerifyX – Walkthrough</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    :root {
-      --primary: #2563eb;
-      --bg-light: #f9fafb;
-      --text-main: #1f2937;
-      --text-subtle: #6b7280;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Manrope', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-main);
-      line-height: 1.6;
+      margin: 0;
+      background-color: #fefefe;
+      color: #111827;
     }
+
     header {
-      padding: 80px 20px 40px;
-      background: linear-gradient(to right, #2563eb, #60a5fa);
+      background-color: #ef4444;
       color: white;
+      padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
-      font-size: 38px;
-      font-weight: 800;
+      font-size: 32px;
+      margin: 0;
     }
+
     header p {
-      font-size: 18px;
-      opacity: 0.95;
-      margin-top: 10px;
+      font-size: 16px;
+      margin-top: 8px;
     }
-    section {
-      max-width: 1000px;
-      margin: auto;
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 40px 20px;
+      line-height: 1.8;
     }
-    .walkthrough {
-      background: white;
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 32px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+
+    h2 {
+      color: #ef4444;
+      margin-top: 32px;
+      font-size: 24px;
     }
-    .walkthrough:hover {
-      transform: translateY(-4px);
-    }
-    .walkthrough h2 {
-      color: var(--primary);
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .walkthrough ol {
+
+    ol {
       padding-left: 20px;
-      margin-bottom: 10px;
     }
-    .walkthrough li {
-      margin-bottom: 10px;
+
+    ol li {
+      margin-bottom: 12px;
     }
-    .walkthrough img {
-      width: 100%;
-      border-radius: 12px;
-      margin-top: 10px;
-    }
+
     a {
-      color: var(--primary);
-      font-weight: 600;
+      color: #ef4444;
       text-decoration: none;
+      font-weight: 600;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     .back-button {
       display: block;
-      margin: 40px auto;
-      width: max-content;
-      background: var(--primary);
+      margin: 40px auto 20px;
+      background: #ef4444;
       color: white;
-      font-weight: 600;
-      padding: 12px 32px;
+      padding: 12px 24px;
       border-radius: 999px;
+      text-align: center;
       text-decoration: none;
-      transition: background 0.3s ease;
+      font-weight: 600;
+      width: fit-content;
     }
+
     .back-button:hover {
-      background: #1e4ed8;
+      background: #dc2626;
     }
+
     footer {
       text-align: center;
-      padding: 30px;
       font-size: 14px;
-      color: #9ca3af;
+      color: #64748b;
+      margin-bottom: 20px;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
+
   <header data-aos="fade-down">
-    <h1>📑 Walkthrough – How to Verify Documents</h1>
-    <p>Simple step-by-step guides to help you verify licenses, documents, and business details.</p>
+    <h1>📑 Walkthrough</h1>
+    <p>Step-by-step guide to verify each license, document, or registration</p>
   </header>
 
-  <section>
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>🧾 GST Verification</h2>
+  <div class="container">
+
+    <h2>1. GST Registration</h2>
     <ol>
       <li>Go to the <a href="https://services.gst.gov.in/services/searchtp" target="_blank">GST Portal</a>.</li>
-      <li>Enter the GSTIN number in the search field.</li>
-      <li>Fill in the captcha and hit “Search.”</li>
-      <li>You’ll get the business name, address, registration date, and status.</li>
+      <li>Enter the GSTIN/UIN or PAN of the taxpayer.</li>
+      <li>Click on “Search” to view the business status.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=GST+Verification+Screenshot" alt="GST Portal Screenshot">
-  </div>
 
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>🏢 UDYAM / MSME Verification</h2>
+    <h2>2. UDYAM / MSME</h2>
     <ol>
-      <li>Go to the <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">UDYAM Verification Portal</a>.</li>
-      <li>Enter the Udyam Registration Number.</li>
-      <li>Verify using registered mobile/email OTP.</li>
-      <li>View enterprise classification and business details.</li>
+      <li>Visit the <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Udyam Verification Page</a>.</li>
+      <li>Enter the 16-digit Udyam Registration Number.</li>
+      <li>Fill the CAPTCHA and click “Verify”.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=UDYAM+Verification+Screenshot" alt="UDYAM Verification Screenshot">
-  </div>
 
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>🍴 FSSAI (FoSCoS) Verification</h2>
+    <h2>3. FSSAI / FoSCoS</h2>
     <ol>
-      <li>Visit the <a href="https://foscos.fssai.gov.in/verification" target="_blank">FoSCoS Portal</a>.</li>
-      <li>Enter your 14-digit FSSAI license number.</li>
-      <li>Click “Search” to see license holder details, validity, and status.</li>
+      <li>Visit the <a href="https://foscos.fssai.gov.in/" target="_blank">FoSCoS Website</a>.</li>
+      <li>Navigate to License/Certificate -> "FBO Search".</li>
+      <li>Enter FSSAI license number to verify details.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=FSSAI+Verification+Screenshot" alt="FSSAI Verification Screenshot">
-  </div>
 
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>🌐 IEC (Import Export Code)</h2>
+    <h2>4. Import Export Code (IEC)</h2>
     <ol>
-      <li>Go to the <a href="https://www.dgft.gov.in/CP/" target="_blank">DGFT Portal</a>.</li>
-      <li>Click on “View IEC” under Services.</li>
-      <li>Enter IEC Number and Captcha.</li>
-      <li>Submit to see importer/exporter details.</li>
+      <li>Open the <a href="https://www.dgft.gov.in/CP/?opt=IEC" target="_blank">DGFT IEC Portal</a>.</li>
+      <li>Enter IEC number or PAN.</li>
+      <li>Click “Search” to view IEC details.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=IEC+Verification+Screenshot" alt="IEC Verification Screenshot">
-  </div>
 
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>📜 Trade License Verification</h2>
+    <h2>5. Trade License</h2>
     <ol>
-      <li>Visit your respective municipal corporation’s portal.</li>
-      <li>Enter the license number or business name.</li>
-      <li>Click search to view license validity and status.</li>
+      <li>Visit <a href="https://www.mcgm.gov.in/irj/portal/anonymous/qldtradelicence" target="_blank">MCGM Trade License Page</a>.</li>
+      <li>Enter License Number or Application details.</li>
+      <li>View current license validity and holder name.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=Trade+License+Verification" alt="Trade License Screenshot">
-  </div>
 
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>🩺 Doctor Registration (State-wise)</h2>
+    <h2>6. Doctors (Medical Council)</h2>
     <ol>
-      <li>Choose your state medical council from the dropdown on the portal or homepage.</li>
-      <li>Use registration number or name to search.</li>
-      <li>View license status and registration validity.</li>
+      <li>Visit <a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">National Medical Commission Portal</a>.</li>
+      <li>Enter Doctor’s name or registration number.</li>
+      <li>Select state and view registration status.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=Doctor+Verification+Screenshot" alt="Doctor Verification Screenshot">
-  </div>
 
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>⚖️ Lawyer Registration (State-wise)</h2>
+    <h2>7. Lawyers (Bar Council)</h2>
     <ol>
-      <li>Go to your State Bar Council's official portal.</li>
-      <li>Search using enrollment number or name.</li>
-      <li>Verify active status and registration details.</li>
+      <li>Open the <a href="https://www.barcouncilofindia.org/roll-of-advocates/" target="_blank">Bar Council India Roll</a>.</li>
+      <li>Enter advocate name or roll number to view status.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=Lawyer+Verification+Screenshot" alt="Lawyer Verification Screenshot">
-  </div>
 
-  <div class="walkthrough" data-aos="fade-up">
-    <h2>📍 Surveyor Verification (IRDA)</h2>
+    <h2>8. Insurance Agent (IRDAI)</h2>
     <ol>
-      <li>Visit the <a href="https://www.irdai.gov.in/" target="_blank">IRDA Portal</a>.</li>
-      <li>Navigate to the “Intermediaries” section.</li>
-      <li>Search for registered surveyors by name or ID.</li>
+      <li>Go to <a href="https://agencyportal.irdai.gov.in/PublicAccess/AgentInformation.aspx" target="_blank">IRDAI Agent Portal</a>.</li>
+      <li>Enter agent code or PAN number.</li>
+      <li>Click “Search” to view agent credentials.</li>
     </ol>
-    <img src="https://via.placeholder.com/800x400?text=Surveyor+Verification+Screenshot" alt="Surveyor Screenshot">
-  </div>
-</section>
 
-  <a href="index.html" class="back-button" data-aos="fade-up">⬅ Back to Home</a>
-  <footer>
-    © 2025 VerifyX. All rights reserved.
-  </footer>
+    <h2>9. Surveyor (IRDAI)</h2>
+    <ol>
+      <li>Visit <a href="https://irdai.gov.in/registered-surveyor-list" target="_blank">IRDAI Surveyor Directory</a>.</li>
+      <li>Search by name, registration number or zone.</li>
+    </ol>
+
+    <h2>10. Vehicle Registration</h2>
+    <ol>
+      <li>Go to <a href="https://vahan.parivahan.gov.in/nrservices/faces/user/searchstatus.xhtml" target="_blank">Vahan Portal</a>.</li>
+      <li>Enter full vehicle number and complete CAPTCHA.</li>
+      <li>Click “Search” to view ownership and registration data.</li>
+    </ol>
+
+    <a href="index.html" class="back-button">⬅ Back to Home</a>
+  </div>
+
+  <footer>Made by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
+
 </body>
 </html>
