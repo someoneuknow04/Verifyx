@@ -4,82 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Business Verification – VerifyX</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Manrope', sans-serif;
-      background-color: #ffffff;
+      background-color: #fefefe;
       margin: 0;
       padding: 0;
-      color: #1e293b;
     }
-
     header {
       background: #ef4444;
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-size: 32px;
     }
-
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
     }
-
     .card {
       background: white;
       border: 2px solid #ef4444;
       border-radius: 16px;
-      padding: 20px;
-      text-align: center;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
-
-    .card h2 {
+    .card h3 {
+      margin-top: 0;
       color: #ef4444;
       font-size: 20px;
-      margin-bottom: 10px;
     }
-
     .card a, .card select {
-      margin-top: 10px;
-      padding: 10px 16px;
+      margin-top: 14px;
+      text-align: center;
+      padding: 10px 18px;
       background: #ef4444;
       color: white;
       border: none;
-      border-radius: 8px;
       font-weight: 600;
+      border-radius: 8px;
       text-decoration: none;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
-
-    select {
+    .card a:hover, .card select:hover {
+      background: #dc2626;
+    }
+    .card select {
       width: 100%;
     }
-
-    .card a:hover, .card select:hover {
-      background: #b91c1c;
-    }
-
     .back-button {
       display: block;
       margin: 40px auto 20px;
-      background: #000;
+      background: #ef4444;
       color: white;
       text-align: center;
       padding: 12px 24px;
@@ -87,11 +80,9 @@
       text-decoration: none;
       font-weight: 600;
     }
-
     .back-button:hover {
-      background: #333;
+      background: #dc2626;
     }
-
     footer {
       text-align: center;
       font-size: 14px;
@@ -105,86 +96,72 @@
 
   <header data-aos="fade-down">
     <h1>Business Verification</h1>
-    <p>Instant links to verify businesses & professionals</p>
+    <p>Verify licenses, registrations, and identities of businesses or professionals directly.</p>
   </header>
 
   <div class="container">
-
-    <!-- GST -->
     <div class="card" data-aos="fade-up">
-      <h2>GST Verification</h2>
-      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify Now</a>
+      <h3>GST Registration</h3>
+      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify</a>
     </div>
 
-    <!-- UDYAM / MSME -->
     <div class="card" data-aos="fade-up">
-      <h2>UDYAM / MSME</h2>
-      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify Now</a>
+      <h3>UDYAM / MSME</h3>
+      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify</a>
     </div>
 
-    <!-- FSSAI -->
     <div class="card" data-aos="fade-up">
-      <h2>FSSAI (FoSCoS)</h2>
-      <a href="https://foscos.fssai.gov.in/Verification/License" target="_blank">Verify Now</a>
+      <h3>FSSAI / FoSCoS</h3>
+      <a href="https://foscos.fssai.gov.in/" target="_blank">Verify</a>
     </div>
 
-    <!-- IEC -->
     <div class="card" data-aos="fade-up">
-      <h2>Import Export Code (IEC)</h2>
-      <a href="https://www.dgft.gov.in/CP/?opt=view-any-ice" target="_blank">Verify Now</a>
+      <h3>Import Export Code (IEC)</h3>
+      <a href="https://www.dgft.gov.in/CP/?opt=IEC" target="_blank">Verify</a>
     </div>
 
-    <!-- Trade License -->
     <div class="card" data-aos="fade-up">
-      <h2>Trade License</h2>
-      <a href="https://mcdonline.nic.in/tri/TradeLicVerfication" target="_blank">Verify Now</a>
+      <h3>Trade License</h3>
+      <a href="https://www.mcgm.gov.in/irj/portal/anonymous/qldtradelicence" target="_blank">Verify</a>
     </div>
 
-    <!-- Doctors -->
     <div class="card" data-aos="fade-up">
-      <h2>Doctor Verification</h2>
-      <select onchange="window.open(this.value, '_blank')">
-        <option disabled selected>Select State Council</option>
+      <h3>Doctors</h3>
+      <select onchange="if(this.value) window.open(this.value, '_blank')">
+        <option value="">Select State</option>
         <option value="https://www.nmc.org.in/information-desk/indian-medical-register/">National Medical Commission</option>
-        <option value="https://maharashtramedicalcouncil.in/OnlineReg/verify.aspx">Maharashtra</option>
-        <option value="https://karnatakamedicalcouncil.com/verify">Karnataka</option>
-        <option value="https://www.tnmedicalcouncil.org/verify.php">Tamil Nadu</option>
-        <option value="https://www.gmcgujarat.org/verify">Gujarat</option>
-        <option value="https://www.mpmedicalcouncil.org/verify.php">Madhya Pradesh</option>
-        <option value="https://www.tsmc.in/verify.aspx">Telangana</option>
+        <option value="https://www.maharashtramedicalcouncil.in/doctorsearch.php">Maharashtra</option>
+        <option value="https://www.knmc.org/">Karnataka</option>
+        <option value="https://www.tnmedicalcouncil.org/">Tamil Nadu</option>
+        <option value="https://www.gmcgujarat.org/">Gujarat</option>
+        <option value="https://apmedicalcouncil.ap.nic.in/">Andhra Pradesh</option>
+        <option value="https://mpmedicalcouncil.org/">Madhya Pradesh</option>
       </select>
     </div>
 
-    <!-- Lawyers -->
     <div class="card" data-aos="fade-up">
-      <h2>Lawyer Verification</h2>
-      <select onchange="window.open(this.value, '_blank')">
-        <option disabled selected>Select Bar Council</option>
-        <option value="https://barcouncilmah.org/advocate-search/">Maharashtra</option>
-        <option value="https://www.ksbc.org.in/advocate-search">Karnataka</option>
-        <option value="https://www.barcounciloftamilnadu.org/advocate-search/">Tamil Nadu</option>
-        <option value="https://barcouncilofgujarat.org/advocate-search/">Gujarat</option>
-        <option value="https://www.barcouncilmp.org/advocate-search">Madhya Pradesh</option>
-        <option value="https://barcounciloftelangana.org/advocate-search/">Telangana</option>
+      <h3>Lawyers</h3>
+      <select onchange="if(this.value) window.open(this.value, '_blank')">
+        <option value="">Select State</option>
+        <option value="https://www.barcouncilofindia.org/roll-of-advocates/">Bar Council of India</option>
+        <option value="https://maharashtrabarcouncil.org/">Maharashtra</option>
+        <option value="https://ksbc.karnataka.gov.in/">Karnataka</option>
+        <option value="https://www.barcounciloftamilnadu.org/">Tamil Nadu</option>
+        <option value="https://barcouncilgujarat.org/">Gujarat</option>
+        <option value="https://www.barcouncilap.org/">Andhra Pradesh</option>
+        <option value="https://www.barcouncilmp.org/">Madhya Pradesh</option>
       </select>
     </div>
 
-    <!-- Insurance -->
     <div class="card" data-aos="fade-up">
-      <h2>IRDA Agent</h2>
-      <a href="https://agencyportal.irdai.gov.in/PublicAccess/AgentLocator.aspx" target="_blank">Verify Now</a>
+      <h3>Insurance Agents (IRDAI)</h3>
+      <a href="https://agencyportal.irdai.gov.in/PublicAccess/AgentInformation.aspx" target="_blank">Verify</a>
     </div>
-
-    <!-- Surveyor -->
-    <div class="card" data-aos="fade-up">
-      <h2>Surveyor Verification</h2>
-      <a href="https://irdai.gov.in/individual-surveyors1" target="_blank">Verify Now</a>
-    </div>
-
   </div>
 
   <a href="index.html" class="back-button" data-aos="fade-up">⬅ Back to Home</a>
-  <footer>Made with ❤️ by Someone</footer>
+
+  <footer>Made by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
