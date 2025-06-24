@@ -3,113 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VerifyX – VAK Reports</title>
+  <title>VerifyX</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
+      margin: 0;
       font-family: 'Manrope', sans-serif;
-      background-color: #fff;
-      color: #1f2937;
+      background-color: #fefefe;
       overflow-x: hidden;
     }
 
     .logo-container {
       text-align: center;
-      padding: 40px 0 10px;
+      padding: 20px 0;
+      background: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
     }
 
     .logo-container img {
-      max-width: 240px;
+      width: 92%;
+      max-width: 700px;
       height: auto;
+      padding: 12px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      background: white;
     }
 
-    .split-section {
+    .split-screen {
       display: flex;
-      height: calc(100vh - 140px);
+      flex-wrap: wrap;
+      height: 100vh;
     }
 
-    .split {
-      flex: 1;
+    .left, .right {
+      flex: 1 1 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
-      text-align: center;
-      padding: 40px 20px;
-      transition: all 0.3s ease;
+      padding: 40px;
+      transition: all 0.4s ease-in-out;
     }
 
-    .split-left {
+    .left {
       background-color: #ef4444;
     }
 
-    .split-right {
-      background-color: #0f0f0f;
+    .right {
+      background-color: #111;
     }
 
-    .split h2 {
+    h2 {
       font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
 
-    .split p {
+    p {
       font-size: 16px;
-      margin-bottom: 20px;
-      font-weight: 400;
-      color: #f3f4f6;
-      max-width: 90%;
+      max-width: 400px;
+      text-align: center;
+      margin-bottom: 24px;
     }
 
-    .split a {
-      display: inline-block;
+    .btn {
       padding: 12px 24px;
-      background: #fff;
-      color: #1f2937;
+      font-size: 16px;
       font-weight: 600;
+      background-color: white;
+      color: #ef4444;
       border-radius: 999px;
       text-decoration: none;
-      transition: background 0.3s ease, transform 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
-    .split a:hover {
-      background: #f3f4f6;
-      transform: translateY(-2px);
+    .btn:hover {
+      background-color: #f3f4f6;
+      color: #b91c1c;
     }
 
     footer {
       text-align: center;
       font-size: 14px;
-      color: #9ca3af;
-      margin: 20px 0;
+      color: #64748b;
+      padding: 16px;
       font-weight: 500;
     }
 
     @media (max-width: 768px) {
-      .split-section {
+      .split-screen {
         flex-direction: column;
         height: auto;
       }
 
-      .split {
+      .left, .right {
+        flex: 1 1 100%;
         padding: 60px 20px;
-        height: 50vh;
       }
 
-      .split h2 {
-        font-size: 24px;
+      h2 {
+        font-size: 26px;
       }
 
-      .split p {
-        font-size: 14px;
+      p {
+        font-size: 15px;
       }
     }
   </style>
@@ -117,27 +120,25 @@
 <body>
 
   <div class="logo-container" data-aos="fade-down">
-    <img src="vak-logo.png" alt="VAK Reports Logo">
+    <img src="vak-logo.png" alt="VAK Reports Logo" />
   </div>
 
-  <div class="split-section">
-    <div class="split split-left" data-aos="fade-right">
+  <div class="split-screen">
+    <div class="left" data-aos="fade-right">
       <h2>Business Verification</h2>
       <p>Search and validate business licenses and professional IDs instantly.</p>
-      <a href="business.html">Verify Now</a>
+      <a href="business.html" class="btn">Verify Now</a>
     </div>
-    <div class="split split-right" data-aos="fade-left">
+    <div class="right" data-aos="fade-left">
       <h2>Bank Portals</h2>
       <p>Login to associated bank dashboards with one click.</p>
-      <a href="bank.html">Go to Portals</a>
+      <a href="bank.html" class="btn">Go to Portals</a>
     </div>
   </div>
 
   <footer>Made by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
