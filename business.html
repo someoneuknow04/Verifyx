@@ -1,115 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VerifyX – Business Verification</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Verification - VerifyX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Manrope', sans-serif;
-      background: linear-gradient(135deg, #eef3ff, #d9e4ff);
-      color: #1e293b;
       padding: 2rem;
-      overflow-x: hidden;
+      background-color: #f9f9f9;
     }
     h1 {
       text-align: center;
-      color: #5e60ce;
-      margin-bottom: 2.5rem;
-      font-size: 2.5rem;
-      font-weight: 800;
-      position: relative;
-      animation: fadeInDown 0.6s ease;
-    }
-    h1::after {
-      content: "";
-      display: block;
-      width: 60%;
-      height: 4px;
-      background-color: #5e60ce;
-      margin: 0.5rem auto 0;
-      border-radius: 10px;
+      font-size: 2rem;
     }
     .section {
-      max-width: 800px;
-      margin: 2.5rem auto;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(16px);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-      animation: fadeInUp 0.8s ease;
+      margin-top: 2rem;
     }
     .section h2 {
-      font-size: 1.6rem;
-      color: #1e293b;
-      margin-bottom: 1rem;
-      font-weight: 700;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
     }
     ul {
       list-style: none;
       padding-left: 0;
     }
-    li a {
-      display: block;
-      background: white;
-      margin-bottom: 0.75rem;
-      padding: 1rem 1.4rem;
-      border-radius: 14px;
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #333;
       text-decoration: none;
-      color: #1e293b;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-      font-weight: 500;
-      transition: transform 0.3s ease, background 0.3s ease;
     }
-    li a:hover {
-      background-color: #edf2ff;
-      transform: translateX(8px);
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1 data-aos="fade-down">Business Verification</h1>
+  <h1>Business Verification Tools</h1>
 
-  <div class="section" data-aos="fade-up" data-aos-delay="100">
-    <h2>Documents</h2>
+  <div class="section">
+    <h2>General Registrations</h2>
     <ul>
-      <li><a href="#">GST Verification</a></li>
-      <li><a href="#">UDYAM/MSME Portal</a></li>
-      <li><a href="#">FSSAI (FoSCoS)</a></li>
-      <li><a href="#">Import Export Code (IEC)</a></li>
-      <li><a href="#">Trade License</a></li>
+      <li><a href="https://www.gst.gov.in/" target="_blank">GST Portal</a></li>
+      <li><a href="https://udyamregistration.gov.in/" target="_blank">UDYAM / MSME</a></li>
+      <li><a href="https://foscos.fssai.gov.in/" target="_blank">FSSAI / FoSCoS</a></li>
+      <li><a href="https://www.dgft.gov.in/CP/" target="_blank">IEC (Import Export Code)</a></li>
+      <li><a href="https://municipalcorporation.verification.com" target="_blank">Trade License (Local)</a></li>
     </ul>
   </div>
 
-  <div class="section" data-aos="fade-up" data-aos-delay="200">
+  <div class="section">
     <h2>Professionals</h2>
     <ul>
       <li><a href="#">Doctor (State-wise)</a></li>
-      <li><a href="#">Lawyer (Bar Council)</a></li>
-      <li><a href="#">IRDA Agents</a></li>
-      <li><a href="#">Chartered Accountant (ICAI)</a></li>
-      <li><a href="#">Company Secretary (ICSI)</a></li>
-      <li><a href="#">Cost Accountant (ICMAI)</a></li>
+      <li><a href="#">Lawyer (Bar Council State-wise)</a></li>
+      <li><a href="https://www.irdai.gov.in/" target="_blank">IRDA (Insurance Agents)</a></li>
+      <li><a href="https://www.icai.org/" target="_blank">CA (ICAI)</a></li>
+      <li><a href="https://www.icsi.edu/" target="_blank">CS (ICSI)</a></li>
+      <li><a href="https://www.icmai.in/" target="_blank">CMA (ICMAI)</a></li>
     </ul>
   </div>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
