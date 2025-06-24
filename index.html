@@ -1,11 +1,12 @@
-<!DOCTYPE html>More actions
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
+ <meta charset="UTF-8" />Add commentMore actions
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VerifyX – Choose Path</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Fonts + AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -13,25 +14,28 @@
       box-sizing: border-box;
     }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
       height: 100%;
+      font-family: 'Manrope', sans-serif;
+      background-color: #f8f9fc;
       font-family: 'Inter', sans-serif;
     }
 
     .container {
       display: flex;
       height: 100vh;
+      position: relative;
     }
 
     .half {
       width: 50%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+@@ -37,22 +24,17 @@
       color: white;
       padding: 40px;
       transition: 0.3s ease;
+      text-align: center;
     }
 
     .left {
@@ -50,13 +54,12 @@
     .cta-button {
       background: white;
       color: #2e65f3;
-      font-weight: 700;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 30px;
+@@ -63,40 +45,26 @@
       font-size: 16px;
       text-decoration: none;
       margin-bottom: 10px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
 
@@ -65,14 +68,17 @@
       transform: translateY(-2px);
     }
 
-    .subtext {
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    .subtext a {
-      color: white;
-      text-decoration: underline;
+    .logo-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 10;
     }
 
     .logo-center {
@@ -87,20 +93,15 @@
       font-size: 20px;
       font-weight: 700;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      pointer-events: auto;
+      text-align: center;
       z-index: 1;
     }
 
-    /* Walkthrough button */
     .walkthrough-link {
       position: absolute;
       top: 20px;
-      right: 30px;
-      background: #1d4ed8;
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
+@@ -110,50 +78,29 @@
       transition: all 0.3s ease;
       z-index: 999;
     }
@@ -109,32 +110,92 @@
       background: #2563eb;
     }
 
-    @media(max-width: 768px) {
-@@ -107,22 +127,25 @@
-</head>
-<body>
+    footer {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #94a3b8;
+      z-index: 999;
+      color: #64748b;
+      font-weight: 500;
+    }
 
-  <!-- Walkthrough Button -->
-  <a href="walkthrough.html" class="walkthrough-link">🔍 Walkthrough</a>
+    @media(max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .half {
+        width: 100%;
+        padding: 60px 20px;
+      }
+
+      .logo-wrapper {
+        position: relative;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+      }
+
+      .container { flex-direction: column; }
+      .half { width: 100%; padding: 60px 20px; }
+      .logo-center {
+        margin: auto;
+        position: static;
+        transform: none;
+        margin: 20px auto;
+      }
+
+      footer {
+        position: relative;
+        transform: none;
+        margin: 30px auto;
+        text-align: center;
+        position: static;
+        margin-top: 40px;
+      }
+    }
+  </style>
+@@ -165,29 +112,22 @@
 
   <div class="container">
     <!-- Left: Business Verifications -->
-<div class="half left">
+    <div class="half left" data-aos="fade-right">
     <div class="half left">
-      <h2> 🔍 Business Verification</h2>
+      <h2>🔍 Business Verification</h2>
       <a href="business.html" class="cta-button">Start Verifying</a>
-</div>
     </div>
 
-    <!-- Center Logo Box -->
+    <!-- Center Logo -->
     <div class="logo-center">VerifyX</div>
 
     <!-- Right: Bank Portals -->
+    <div class="half right" data-aos="fade-left">
     <div class="half right">
-      <h2>🏦 Bank Portals </h2>
+      <h2>🏦 Bank Portals</h2>
       <a href="bank.html" class="cta-button">Go to Bank Portals</a>
     </div>
+
+    <!-- Perfectly Centered Logo -->
+    <div class="logo-wrapper">
+      <div class="logo-center" data-aos="zoom-in">VerifyX</div>
+    </div>
+
+    <!-- Footer Credit -->
+    <footer>Made by Someone</footer>
   </div>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <footer>Made by Someone</footer>
 
 </body>
 </html>
