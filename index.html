@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VerifyX</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -20,15 +20,15 @@
       scroll-behavior: smooth;
     }
 
-    .split-hero {
+    .split-section {
       display: flex;
       height: 100vh;
-      position: relative;
     }
 
     .left, .right {
       flex: 1;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -38,72 +38,93 @@
     .left {
       background-color: #ef4444;
       color: white;
-      flex-direction: column;
     }
 
     .right {
-      background-color: #ffffff;
+      background-color: white;
       color: #1e293b;
-      flex-direction: column;
     }
 
-    .split-hero img.logo-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 160px;
-      transform: translate(-50%, -50%);
-      z-index: 10;
-      pointer-events: none;
+    .split-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .split-section p {
+      font-size: 1rem;
+      max-width: 400px;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
     }
 
     .cta-button {
-      margin-top: 1.5rem;
-      padding: 12px 28px;
-      font-weight: 600;
-      border: 2px solid white;
-      background: transparent;
-      color: white;
+      padding: 12px 24px;
+      border: 2px solid currentColor;
       border-radius: 999px;
       text-decoration: none;
-      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
-    .cta-button:hover {
-      background: white;
+    .left .cta-button {
+      color: white;
+      border-color: white;
+    }
+
+    .left .cta-button:hover {
+      background-color: white;
       color: #ef4444;
     }
 
-    .scroll-down {
-      text-align: center;
-      margin-top: -24px;
-      font-size: 14px;
-      color: #64748b;
+    .right .cta-button {
+      color: #ef4444;
+      border-color: #ef4444;
+    }
+
+    .right .cta-button:hover {
+      background-color: #ef4444;
+      color: white;
     }
 
     .top-right {
       position: absolute;
       top: 20px;
       right: 20px;
-      z-index: 20;
+      z-index: 10;
     }
 
     .top-right a {
-      padding: 0.75rem 1.25rem;
+      padding: 0.6rem 1.2rem;
       background: #1e1e1e;
-      color: #fff;
+      color: white;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 60px;
+    }
+
+    .scroll-down {
+      text-align: center;
+      font-size: 14px;
+      margin-top: -40px;
+      color: #64748b;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
-      padding: 2rem;
+      padding: 3rem 2rem;
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 0 auto;
     }
 
     .card {
@@ -139,7 +160,6 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
-      transition: background 0.3s ease;
     }
 
     .card a:hover {
@@ -153,46 +173,55 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+
+    @media(max-width: 768px) {
+      .split-section {
+        flex-direction: column;
+        height: auto;
+      }
+      .logo {
+        position: static;
+        transform: none;
+        margin: 1rem auto;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Walkthrough Button -->
   <div class="top-right">
     <a href="walkthrough.html">Walkthrough</a>
   </div>
 
-  <!-- Hero Section -->
-  <section class="split-hero">
+  <img src="vak-logo.jpg" alt="VAK Reports Logo" class="logo" />
+
+  <section class="split-section">
     <div class="left">
-      <div>
-        <h2>The combination of great design and diligent app development.</h2>
-        <a href="#verify-sections" class="cta-button">View Tools</a>
-      </div>
+      <h1>Business Verification</h1>
+      <p>Verify GST, UDYAM, FSSAI, Doctors, Lawyers, CAs & more.</p>
+      <a href="business.html" class="cta-button">Explore Tools</a>
     </div>
     <div class="right">
-      <h2>We make <span style="color:#ef4444;">sleek and modern</span> designs for your business.</h2>
+      <h1>Bank Portals</h1>
+      <p>Instant access to ICICI Ilens, Piramal, ABHFL, IDFC, and more.</p>
+      <a href="bank.html" class="cta-button">Explore Portals</a>
     </div>
-    <img src="vak-logo.jpg" alt="VAK Reports Logo" class="logo-center" />
   </section>
 
   <div class="scroll-down">▼ Scroll to explore ▼</div>
 
-  <!-- Main Content -->
-  <div id="verify-sections">
-    <main class="grid">
-      <div class="card" data-aos="fade-up">
-        <h2>Business Verification</h2>
-        <p>Tools to verify GST, UDYAM, FSSAI, professionals like CA, Doctor, Lawyer & more.</p>
-        <a href="business.html">Explore</a>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <h2>Bank Portals</h2>
-        <p>Quick access to lender dashboards like ICICI Ilens, Piramal, ABHFL, and others.</p>
-        <a href="bank.html">Explore</a>
-      </div>
-    </main>
-  </div>
+  <main class="grid" data-aos="fade-up">
+    <div class="card">
+      <h2>Business Verification</h2>
+      <p>Tools to verify GST, UDYAM, FSSAI, professionals like CA, Doctor, Lawyer & more.</p>
+      <a href="business.html">Explore</a>
+    </div>
+    <div class="card">
+      <h2>Bank Portals</h2>
+      <p>Quick access to lender dashboards like ICICI Ilens, Piramal, ABHFL, and others.</p>
+      <a href="bank.html">Explore</a>
+    </div>
+  </main>
 
   <footer>Made with ❤️ by Someone</footer>
 
