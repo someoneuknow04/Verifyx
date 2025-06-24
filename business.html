@@ -2,282 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VerifyX – Business Verification</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      font-family: "Manrope", sans-serif;
-      background-color: #f8f9fc;
+      font-family: 'Manrope', sans-serif;
+      background-color: #f8fafc;
       margin: 0;
       padding: 0;
     }
-
     header {
-      background: linear-gradient(to right, #4f46e5, #3b82f6);
+      background: linear-gradient(to right, #0f766e, #0e7490);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-size: 32px;
     }
-
-    header p {
-      margin: 8px 0 0;
-      font-weight: 500;
-    }
-
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
-
     .card {
       background: white;
       border-radius: 16px;
       padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      text-align: center;
+      transition: 0.3s ease;
     }
-
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
-
     .card h2 {
-      font-size: 20px;
-      color: #1e40af;
-      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
     }
-
     .card a {
       display: inline-block;
+      padding: 10px 16px;
       margin-top: 10px;
-      color: #3b82f6;
-      font-weight: 600;
+      background: #0e7490;
+      color: white;
       text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
     }
-
     .card a:hover {
-      text-decoration: underline;
+      background: #0f766e;
     }
-
     .back-button {
       display: block;
-      margin: 30px auto;
-      background: #3b82f6;
+      margin: 40px auto 20px;
+      background: #0f766e;
       color: white;
       text-align: center;
       padding: 12px 24px;
       border-radius: 999px;
       text-decoration: none;
-      width: max-content;
       font-weight: 600;
-      cursor: pointer;
     }
-
-    .back-button:hover {
-      background: #2563eb;
-    }
-
-    label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    select {
-      padding: 8px;
-      font-size: 16px;
-      width: 100%;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    .links-container a {
-      display: block;
-      margin-top: 12px;
-      color: #3b82f6;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .links-container a:hover {
-      text-decoration: underline;
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 20px;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
   <header data-aos="fade-down">
-    <h1>🔍 Business Verification Links</h1>
-    <p>Click on any verification service to proceed to the official portal.</p>
+    <h1>Business Verification</h1>
+    <p>Government & professional verification portals in one place.</p>
   </header>
 
   <div class="container">
     <div class="card" data-aos="fade-up">
-      <h2>GST Verification</h2>
-      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify GST Number</a>
+      <h2>GST Registration</h2>
+      <a href="https://www.gst.gov.in/" target="_blank">Verify</a>
     </div>
-
     <div class="card" data-aos="fade-up">
       <h2>UDYAM / MSME</h2>
-      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify UDYAM/MSME Registration</a>
+      <a href="https://udyamregistration.gov.in/" target="_blank">Verify</a>
     </div>
-
     <div class="card" data-aos="fade-up">
-      <h2>FSSAI (FoSCoS)</h2>
-      <a href="https://foscos.fssai.gov.in/verification" target="_blank">Verify FSSAI License</a>
+      <h2>FSSAI / FoSCoS</h2>
+      <a href="https://foscos.fssai.gov.in/" target="_blank">Verify</a>
     </div>
-
     <div class="card" data-aos="fade-up">
-      <h2>IEC (Import Export Code)</h2>
-      <a href="https://www.dgft.gov.in/CP/" target="_blank">Verify IEC Details</a>
+      <h2>IEC (Import Export)</h2>
+      <a href="https://www.dgft.gov.in/CP/" target="_blank">Verify</a>
     </div>
-
     <div class="card" data-aos="fade-up">
       <h2>Trade License</h2>
-      <a href="https://www.mcgm.gov.in/irj/portal/anonymous/qltrade" target="_blank">Search Trade License</a>
+      <a href="https://localmunicipal.verification.gov.in" target="_blank">Verify</a>
     </div>
-
     <div class="card" data-aos="fade-up">
-      <h2>Doctor Verification</h2>
-      <label for="doctorStateSelect">Select State:</label>
-      <select id="doctorStateSelect">
-        <option value="">-- Choose a State --</option>
-        <option value="maharashtra">Maharashtra</option>
-        <option value="karnataka">Karnataka</option>
-        <option value="tamilnadu">Tamil Nadu</option>
-        <option value="gujarat">Gujarat</option>
-        <option value="telangana">Telangana</option>
-        <option value="mp">Madhya Pradesh</option>
-      </select>
-      <div class="links-container" id="doctorLinks"></div>
+      <h2>Doctors (State-wise)</h2>
+      <a href="#" target="_blank">Verify</a>
     </div>
-
     <div class="card" data-aos="fade-up">
-      <h2>Lawyer Verification</h2>
-      <label for="lawyerStateSelect">Select State:</label>
-      <select id="lawyerStateSelect">
-        <option value="">-- Choose a State --</option>
-        <option value="maharashtra">Maharashtra</option>
-        <option value="karnataka">Karnataka</option>
-        <option value="tamilnadu">Tamil Nadu</option>
-        <option value="gujarat">Gujarat</option>
-        <option value="telangana">Telangana</option>
-        <option value="mp">Madhya Pradesh</option>
-      </select>
-      <div class="links-container" id="lawyerLinks"></div>
+      <h2>Lawyers (Bar Council)</h2>
+      <a href="#" target="_blank">Verify</a>
     </div>
-
     <div class="card" data-aos="fade-up">
-      <h2>Surveyor (IRDA)</h2>
-      <a href="https://irdai.gov.in/individual-surveyors1/" target="_blank">Verify IRDA Surveyor</a>
+      <h2>IRDA Agents</h2>
+      <a href="https://www.irdai.gov.in/" target="_blank">Verify</a>
     </div>
-
-    <!-- ✅ New IRDAI Surveyor Card -->
     <div class="card" data-aos="fade-up">
-      <h2>IRDAI Surveyor Verification</h2>
-      <a href="https://irdai.gov.in/individual-surveyors1/" target="_blank" >Verify IRDAI Licensed Surveyor</a>
+      <h2>Chartered Accountants</h2>
+      <a href="https://www.icai.org/" target="_blank">Verify</a>
+    </div>
+    <div class="card" data-aos="fade-up">
+      <h2>Company Secretaries</h2>
+      <a href="https://www.icsi.edu/" target="_blank">Verify</a>
+    </div>
+    <div class="card" data-aos="fade-up">
+      <h2>Cost Accountants</h2>
+      <a href="https://www.icmai.in/" target="_blank">Verify</a>
     </div>
   </div>
 
   <a href="index.html" class="back-button" data-aos="fade-up">⬅ Back to Home</a>
+  <footer>Made by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    const doctorLinksByState = {
-      maharashtra: [
-        { text: "Maharashtra Medical Council", url: "https://www.mahmedicalcouncil.in/" },
-        { text: "MCI Doctor Verification", url: "https://www.mciindia.org/doctorverification" }
-      ],
-      karnataka: [
-        { text: "Karnataka Medical Council", url: "http://www.kmcindia.in/" },
-        { text: "MCI Doctor Verification", url: "https://www.mciindia.org/doctorverification" }
-      ],
-      tamilnadu: [
-        { text: "Tamil Nadu Medical Council", url: "http://www.tnmedicalcouncil.org/" },
-        { text: "MCI Doctor Verification", url: "https://www.mciindia.org/doctorverification" }
-      ],
-      gujarat: [
-        { text: "Gujarat Medical Council", url: "http://www.gmcgujarat.org/" },
-        { text: "MCI Doctor Verification", url: "https://www.mciindia.org/doctorverification" }
-      ],
-      telangana: [
-        { text: "Telangana Medical Council", url: "https://tmdc.in/" },
-        { text: "MCI Doctor Verification", url: "https://www.mciindia.org/doctorverification" }
-      ],
-      mp: [
-        { text: "Madhya Pradesh Medical Council", url: "http://www.mpmedicalcouncil.org/" },
-        { text: "MCI Doctor Verification", url: "https://www.mciindia.org/doctorverification" }
-      ],
-    };
-
-    const lawyerLinksByState = {
-      maharashtra: [
-        { text: "Maharashtra Bar Council", url: "https://www.mbarc.in/" },
-        { text: "Bar Council of India", url: "https://www.barcouncilofindia.org/" }
-      ],
-      karnataka: [
-        { text: "Karnataka State Bar Council", url: "http://www.karnatakabarcouncil.com/" },
-        { text: "Bar Council of India", url: "https://www.barcouncilofindia.org/" }
-      ],
-      tamilnadu: [
-        { text: "Tamil Nadu Bar Council", url: "http://www.tnbarcouncil.org/" },
-        { text: "Bar Council of India", url: "https://www.barcouncilofindia.org/" }
-      ],
-      gujarat: [
-        { text: "Gujarat State Bar Council", url: "http://www.gujaratbarcouncil.org/" },
-        { text: "Bar Council of India", url: "https://www.barcouncilofindia.org/" }
-      ],
-      telangana: [
-        { text: "Telangana Bar Council", url: "http://www.telanganabarcouncil.org/" },
-        { text: "Bar Council of India", url: "https://www.barcouncilofindia.org/" }
-      ],
-      mp: [
-        { text: "Madhya Pradesh Bar Council", url: "http://www.mpbarch.org/" },
-        { text: "Bar Council of India", url: "https://www.barcouncilofindia.org/" }
-      ],
-    };
-
-    function populateLinks(selectElem, linksContainer, linksByState) {
-      selectElem.addEventListener("change", () => {
-        const selectedState = selectElem.value;
-        linksContainer.innerHTML = "";
-
-        if (!selectedState) return;
-
-        const links = linksByState[selectedState] || [];
-        links.forEach((link) => {
-          const a = document.createElement("a");
-          a.href = link.url;
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-          a.textContent = link.text;
-          linksContainer.appendChild(a);
-        });
-      });
-    }
-
-    populateLinks(
-      document.getElementById("doctorStateSelect"),
-      document.getElementById("doctorLinks"),
-      doctorLinksByState
-    );
-
-    populateLinks(
-      document.getElementById("lawyerStateSelect"),
-      document.getElementById("lawyerLinks"),
-      lawyerLinksByState
-    );
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
