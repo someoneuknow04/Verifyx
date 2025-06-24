@@ -2,185 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VerifyX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerifyX – Powered by VAK Reports</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
+      margin: 0;
       font-family: 'Manrope', sans-serif;
-      background-color: #fff;
-      color: #1e293b;
+      background-color: #fefefe;
     }
 
-    .top-right {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 10;
-    }
-
-    .top-right a {
-      padding: 0.6rem 1.2rem;
-      background: #000;
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .logo-wrapper {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 5;
-    }
-
-    .logo-wrapper img {
-      height: 60px;
-    }
-
-    .split {
+    .split-screen {
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
+      flex-wrap: wrap;
     }
 
-    .split-section {
-      flex: 1 1 50%;
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+      padding: 60px 40px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 2rem;
-      text-align: center;
+      justify-content: center;
+      color: white;
     }
 
     .left {
       background-color: #ef4444;
-      color: white;
     }
 
     .right {
-      background-color: white;
-      color: #1e293b;
+      background-color: #111111;
     }
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
+      font-size: 36px;
+      margin-bottom: 16px;
     }
 
     p {
-      max-width: 400px;
-      font-size: 1rem;
+      font-size: 16px;
+      margin-bottom: 24px;
       opacity: 0.9;
-      margin-bottom: 1.5rem;
     }
 
-    .cta-button {
+    a.button {
+      background-color: white;
+      color: #ef4444;
       padding: 12px 24px;
-      border: 2px solid currentColor;
       border-radius: 999px;
-      font-weight: 600;
       text-decoration: none;
+      font-weight: 600;
       transition: all 0.3s ease;
     }
 
-    .left .cta-button {
-      color: white;
-      border-color: white;
-    }
-
-    .left .cta-button:hover {
+    .right a.button {
+      color: #111111;
       background-color: white;
-      color: #ef4444;
     }
 
-    .right .cta-button {
-      color: #ef4444;
-      border-color: #ef4444;
+    a.button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    .right .cta-button:hover {
-      background-color: #ef4444;
-      color: white;
-    }
-
-    .scroll-down {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
+    .logo-container {
       text-align: center;
-      font-size: 14px;
-      color: #64748b;
+      margin: 40px auto 20px;
+    }
+
+    .logo-container img {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      font-size: 14px;
+      padding: 20px;
+      background: #fff;
       color: #64748b;
-      margin: 2rem 0 1rem;
       font-weight: 500;
     }
 
-    @media(max-width: 768px) {
-      .split {
-        flex-direction: column;
-        height: auto;
-      }
-
-      .split-section {
-        padding: 3rem 2rem;
-      }
-
-      .logo-wrapper {
-        position: static;
-        transform: none;
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 28px;
         text-align: center;
-        margin-top: 20px;
       }
 
-      .scroll-down {
-        position: static;
-        margin-bottom: 1rem;
+      p {
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-right">
-    <a href="walkthrough.html">Walkthrough</a>
+  <div class="logo-container" data-aos="zoom-in">
+    <img src="vak-logo.jpg" alt="VAK Reports Logo">
   </div>
 
-  <div class="logo-wrapper">
-    <img src="vak-logo.jpg" alt="VAK Reports Logo" />
-  </div>
-
-  <section class="split">
-    <div class="split-section left" data-aos="fade-right">
+  <div class="split-screen">
+    <div class="left" data-aos="fade-right">
       <h1>Business Verification</h1>
-      <p>Verify GST, UDYAM, FSSAI, Doctors, Lawyers, and more.</p>
-      <a href="business.html" class="cta-button">Explore Tools</a>
+      <p>Search and validate business licenses and professional IDs instantly.</p>
+      <a href="business.html" class="button">Verify Now</a>
     </div>
-    <div class="split-section right" data-aos="fade-left">
+    <div class="right" data-aos="fade-left">
       <h1>Bank Portals</h1>
-      <p>Instant access to ICICI Ilens, Piramal, ABHFL, IDFC & more.</p>
-      <a href="bank.html" class="cta-button">Explore Portals</a>
+      <p>Login to associated bank dashboards with one click.</p>
+      <a href="bank.html" class="button">Go to Portals</a>
     </div>
-  </section>
+  </div>
 
   <footer>Made by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
