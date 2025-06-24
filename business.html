@@ -2,77 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VerifyX – Business Verification</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
+    :root {
+      --primary: #0ea5e9;
+      --accent: #0284c7;
+      --bg: #f8fafc;
+      --text: #0f172a;
+    }
+
     body {
       font-family: 'Manrope', sans-serif;
-      background-color: #f8fafc;
+      background: var(--bg);
+      color: var(--text);
       margin: 0;
       padding: 0;
     }
+
     header {
-      background: linear-gradient(to right, #0f766e, #0e7490);
+      background-color: var(--primary);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 32px;
     }
-    .container {
+
+    .top-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .theme-switcher select {
+      padding: 8px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid #cbd5e1;
+    }
+
+    .back-button {
+      padding: 10px 18px;
+      background: var(--text);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .grid {
       max-width: 1100px;
       margin: 0 auto;
       padding: 40px 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
     }
+
     .card {
       background: white;
       border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
       text-align: center;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
     }
+
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
+
     .card h2 {
-      font-size: 1.1rem;
-      color: #0f172a;
-      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: var(--primary);
     }
+
     .card a {
       display: inline-block;
-      padding: 10px 16px;
-      margin-top: 10px;
-      background: #0e7490;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background: var(--primary);
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
       transition: background 0.3s ease;
     }
+
     .card a:hover {
-      background: #0f766e;
+      background: var(--accent);
     }
-    .back-button {
-      display: block;
-      margin: 40px auto 20px;
-      background: #0f766e;
-      color: white;
-      text-align: center;
-      padding: 12px 24px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+
     footer {
       text-align: center;
       font-size: 14px;
@@ -84,61 +114,76 @@
 </head>
 <body>
   <header data-aos="fade-down">
-    <h1>Business Verification</h1>
-    <p>Government & professional verification portals in one place.</p>
+    <h1>🔍 Business Verification</h1>
+    <p>Click below to verify registration and professional credentials.</p>
   </header>
 
-  <div class="container">
-    <div class="card" data-aos="fade-up">
-      <h2>GST Registration</h2>
-      <a href="https://www.gst.gov.in/" target="_blank">Verify</a>
+  <div class="top-controls">
+    <div class="theme-switcher">
+      <select id="themeSwitcher">
+        <option value="white">⚪ White</option>
+        <option value="black">⚫ Black</option>
+        <option value="red">🔴 Red</option>
+      </select>
     </div>
-    <div class="card" data-aos="fade-up">
-      <h2>UDYAM / MSME</h2>
-      <a href="https://udyamregistration.gov.in/" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>FSSAI / FoSCoS</h2>
-      <a href="https://foscos.fssai.gov.in/" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>IEC (Import Export)</h2>
-      <a href="https://www.dgft.gov.in/CP/" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>Trade License</h2>
-      <a href="https://localmunicipal.verification.gov.in" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>Doctors (State-wise)</h2>
-      <a href="#" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>Lawyers (Bar Council)</h2>
-      <a href="#" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>IRDA Agents</h2>
-      <a href="https://www.irdai.gov.in/" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>Chartered Accountants</h2>
-      <a href="https://www.icai.org/" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>Company Secretaries</h2>
-      <a href="https://www.icsi.edu/" target="_blank">Verify</a>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <h2>Cost Accountants</h2>
-      <a href="https://www.icmai.in/" target="_blank">Verify</a>
-    </div>
+    <a href="index.html" class="back-button">⬅ Back to Home</a>
   </div>
 
-  <a href="index.html" class="back-button" data-aos="fade-up">⬅ Back to Home</a>
-  <footer>Made by Someone</footer>
+  <div class="grid">
+    <div class="card" data-aos="fade-up"><h2>GST Portal</h2><a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify GST</a></div>
+    <div class="card" data-aos="fade-up"><h2>UDYAM/MSME</h2><a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify MSME</a></div>
+    <div class="card" data-aos="fade-up"><h2>FSSAI (FoSCoS)</h2><a href="https://foscos.fssai.gov.in/" target="_blank">Check FSSAI</a></div>
+    <div class="card" data-aos="fade-up"><h2>IEC Code</h2><a href="https://www.dgft.gov.in/CP/" target="_blank">Verify IEC</a></div>
+    <div class="card" data-aos="fade-up"><h2>Trade License</h2><a href="https://www.mcciapune.com/" target="_blank">Search License</a></div>
+    <div class="card" data-aos="fade-up"><h2>Doctor (MCI/State)</h2><a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Check Doctor</a></div>
+    <div class="card" data-aos="fade-up"><h2>Lawyer</h2><a href="https://www.barcouncilofindia.org/" target="_blank">Check Lawyer</a></div>
+    <div class="card" data-aos="fade-up"><h2>Surveyor (IRDAI)</h2><a href="https://irdai.gov.in/" target="_blank">Check Surveyor</a></div>
+    <div class="card" data-aos="fade-up"><h2>Insurance Agent</h2><a href="https://agencyportal.irdai.gov.in/" target="_blank">Check IRDA Agent</a></div>
+    <div class="card" data-aos="fade-up"><h2>CA (ICAI)</h2><a href="https://www.icai.org/post/members-directory" target="_blank">Verify CA</a></div>
+    <div class="card" data-aos="fade-up"><h2>CS (ICSI)</h2><a href="https://www.icsi.edu/member/" target="_blank">Verify CS</a></div>
+    <div class="card" data-aos="fade-up"><h2>CMA (ICMAI)</h2><a href="https://www.icmai.in/" target="_blank">Verify CMA</a></div>
+  </div>
+
+  <footer>Made with ❤️ by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+    const themes = {
+      white: {
+        "--primary": "#0ea5e9",
+        "--accent": "#0284c7",
+        "--bg": "#f8fafc",
+        "--text": "#0f172a"
+      },
+      black: {
+        "--primary": "#0f172a",
+        "--accent": "#1e293b",
+        "--bg": "#000000",
+        "--text": "#f8fafc"
+      },
+      red: {
+        "--primary": "#dc2626",
+        "--accent": "#991b1b",
+        "--bg": "#fff1f2",
+        "--text": "#1c0507"
+      }
+    };
+
+    const select = document.getElementById("themeSwitcher");
+    select.addEventListener("change", e => applyTheme(e.target.value));
+
+    function applyTheme(theme) {
+      const vars = themes[theme];
+      for (let key in vars) {
+        document.documentElement.style.setProperty(key, vars[key]);
+      }
+      localStorage.setItem("verifyx-theme", theme);
+    }
+
+    const saved = localStorage.getItem("verifyx-theme") || "white";
+    select.value = saved;
+    applyTheme(saved);
+  </script>
 </body>
 </html>
