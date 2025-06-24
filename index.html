@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VerifyX</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -15,24 +15,51 @@
 
     body {
       font-family: 'Manrope', sans-serif;
-      background-color: #ffffff;
+      background-color: #fff;
       color: #1e293b;
-      scroll-behavior: smooth;
     }
 
-    .split-section {
+    .top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .top-right a {
+      padding: 0.6rem 1.2rem;
+      background: #000;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .logo-wrapper {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .logo-wrapper img {
+      height: 60px;
+    }
+
+    .split {
       display: flex;
       height: 100vh;
     }
 
-    .left, .right {
-      flex: 1;
+    .split-section {
+      flex: 1 1 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
       padding: 2rem;
+      text-align: center;
     }
 
     .left {
@@ -45,25 +72,25 @@
       color: #1e293b;
     }
 
-    .split-section h1 {
+    h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
       font-weight: 800;
+      margin-bottom: 1rem;
     }
 
-    .split-section p {
-      font-size: 1rem;
+    p {
       max-width: 400px;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
       opacity: 0.9;
+      margin-bottom: 1.5rem;
     }
 
     .cta-button {
       padding: 12px 24px;
       border: 2px solid currentColor;
       border-radius: 999px;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
@@ -87,102 +114,43 @@
       color: white;
     }
 
-    .top-right {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 10;
-    }
-
-    .top-right a {
-      padding: 0.6rem 1.2rem;
-      background: #1e1e1e;
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 60px;
-    }
-
     .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
       text-align: center;
       font-size: 14px;
-      margin-top: -40px;
       color: #64748b;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    .card h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #ef4444;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #475569;
-      margin-bottom: 1.5rem;
-    }
-
-    .card a {
-      padding: 10px 20px;
-      background: #ef4444;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
-    .card a:hover {
-      background: #b91c1c;
     }
 
     footer {
       text-align: center;
       font-size: 14px;
       color: #64748b;
-      padding: 1rem;
-      margin-top: 2rem;
+      margin: 2rem 0 1rem;
+      font-weight: 500;
     }
 
     @media(max-width: 768px) {
-      .split-section {
+      .split {
         flex-direction: column;
         height: auto;
       }
-      .logo {
+
+      .split-section {
+        padding: 3rem 2rem;
+      }
+
+      .logo-wrapper {
         position: static;
         transform: none;
-        margin: 1rem auto;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .scroll-down {
+        position: static;
+        margin-bottom: 1rem;
       }
     }
   </style>
@@ -193,22 +161,26 @@
     <a href="walkthrough.html">Walkthrough</a>
   </div>
 
-  <img src="vak-logo.jpg" alt="VAK Reports Logo" class="logo" />
+  <div class="logo-wrapper">
+    <img src="vak-logo.jpg" alt="VAK Reports Logo" />
+  </div>
 
-  <section class="split-section">
-    <div class="left">
+  <section class="split">
+    <div class="split-section left" data-aos="fade-right">
       <h1>Business Verification</h1>
-      <p>Verify businesses with portals</p>
+      <p>Verify GST, UDYAM, FSSAI, Doctors, Lawyers, and more.</p>
       <a href="business.html" class="cta-button">Explore Tools</a>
     </div>
-    <div class="right">
+    <div class="split-section right" data-aos="fade-left">
       <h1>Bank Portals</h1>
-      <p>Instant access to all bank bortals</p>
+      <p>Instant access to ICICI Ilens, Piramal, ABHFL, IDFC & more.</p>
       <a href="bank.html" class="cta-button">Explore Portals</a>
     </div>
-  </main>
+  </section>
 
-  <footer>Made by Someone</footer>
+  <div class="scroll-down">▼ Scroll to explore ▼</div>
+
+  <footer>Made with ❤️ by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
