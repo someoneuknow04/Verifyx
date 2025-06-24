@@ -13,16 +13,19 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background: #ef4444;
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 32px;
     }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -31,6 +34,7 @@
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
     }
+
     .card {
       background: white;
       border: 2px solid #ef4444;
@@ -41,15 +45,18 @@
       justify-content: space-between;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
+
     .card h3 {
       margin-top: 0;
       color: #ef4444;
       font-size: 20px;
     }
+
     .card a, .card select {
       margin-top: 14px;
       text-align: center;
@@ -63,26 +70,34 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
+
     .card a:hover, .card select:hover {
       background: #dc2626;
     }
+
     .card select {
       width: 100%;
     }
+
     .back-button {
-      display: block;
-      margin: 40px auto 20px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
       background: #ef4444;
       color: white;
-      text-align: center;
-      padding: 12px 24px;
+      padding: 12px 20px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1000;
+      transition: background 0.3s ease;
     }
+
     .back-button:hover {
       background: #dc2626;
     }
+
     footer {
       text-align: center;
       font-size: 14px;
@@ -100,6 +115,7 @@
   </header>
 
   <div class="container">
+
     <div class="card" data-aos="fade-up">
       <h3>GST Registration</h3>
       <a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify</a>
@@ -112,7 +128,7 @@
 
     <div class="card" data-aos="fade-up">
       <h3>FSSAI / FoSCoS</h3>
-      <a href="https://foscos.fssai.gov.in/ViewApplicationStatus.aspx" target="_blank">Verify</a>
+      <a href="https://foscos.fssai.gov.in/" target="_blank">Verify</a>
     </div>
 
     <div class="card" data-aos="fade-up">
@@ -167,6 +183,7 @@
       <h3>Vehicle Registration</h3>
       <a href="https://vahan.parivahan.gov.in/nrservices/faces/user/searchstatus.xhtml" target="_blank">Verify</a>
     </div>
+
   </div>
 
   <a href="index.html" class="back-button">⬅ Back to Home</a>
