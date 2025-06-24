@@ -3,27 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VerifyX – Business Verification</title>
+  <title>Business Verification – VerifyX</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    :root {
-      --primary: #0ea5e9;
-      --accent: #0284c7;
-      --bg: #f8fafc;
-      --text: #0f172a;
-    }
-
     body {
       font-family: 'Manrope', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background-color: #ffffff;
       margin: 0;
       padding: 0;
+      color: #1e293b;
     }
 
     header {
-      background-color: var(--primary);
+      background: #ef4444;
       color: white;
       padding: 60px 20px;
       text-align: center;
@@ -34,47 +27,22 @@
       font-size: 32px;
     }
 
-    .top-controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .theme-switcher select {
-      padding: 8px;
-      border-radius: 8px;
-      font-weight: 600;
-      border: 1px solid #cbd5e1;
-    }
-
-    .back-button {
-      padding: 10px 18px;
-      background: var(--text);
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .grid {
+    .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 40px 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 24px;
     }
 
     .card {
       background: white;
+      border: 2px solid #ef4444;
       border-radius: 16px;
       padding: 20px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
       text-align: center;
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
@@ -83,24 +51,45 @@
     }
 
     .card h2 {
-      font-size: 1.2rem;
-      color: var(--primary);
+      color: #ef4444;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
-    .card a {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 18px;
-      background: var(--primary);
+    .card a, .card select {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: #ef4444;
       color: white;
-      text-decoration: none;
+      border: none;
       border-radius: 8px;
       font-weight: 600;
-      transition: background 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    .card a:hover {
-      background: var(--accent);
+    select {
+      width: 100%;
+    }
+
+    .card a:hover, .card select:hover {
+      background: #b91c1c;
+    }
+
+    .back-button {
+      display: block;
+      margin: 40px auto 20px;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-button:hover {
+      background: #333;
     }
 
     footer {
@@ -113,77 +102,92 @@
   </style>
 </head>
 <body>
+
   <header data-aos="fade-down">
-    <h1>🔍 Business Verification</h1>
-    <p>Click below to verify registration and professional credentials.</p>
+    <h1>Business Verification</h1>
+    <p>Instant links to verify businesses & professionals</p>
   </header>
 
-  <div class="top-controls">
-    <div class="theme-switcher">
-      <select id="themeSwitcher">
-        <option value="white">⚪ White</option>
-        <option value="black">⚫ Black</option>
-        <option value="red">🔴 Red</option>
+  <div class="container">
+
+    <!-- GST -->
+    <div class="card" data-aos="fade-up">
+      <h2>GST Verification</h2>
+      <a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify Now</a>
+    </div>
+
+    <!-- UDYAM / MSME -->
+    <div class="card" data-aos="fade-up">
+      <h2>UDYAM / MSME</h2>
+      <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify Now</a>
+    </div>
+
+    <!-- FSSAI -->
+    <div class="card" data-aos="fade-up">
+      <h2>FSSAI (FoSCoS)</h2>
+      <a href="https://foscos.fssai.gov.in/Verification/License" target="_blank">Verify Now</a>
+    </div>
+
+    <!-- IEC -->
+    <div class="card" data-aos="fade-up">
+      <h2>Import Export Code (IEC)</h2>
+      <a href="https://www.dgft.gov.in/CP/?opt=IEC" target="_blank">Verify Now</a>
+    </div>
+
+    <!-- Trade License -->
+    <div class="card" data-aos="fade-up">
+      <h2>Trade License</h2>
+      <a href="https://mcdonline.nic.in/tri/TradeLicVerfication" target="_blank">Verify Now</a>
+    </div>
+
+    <!-- Doctors -->
+    <div class="card" data-aos="fade-up">
+      <h2>Doctor Verification</h2>
+      <select onchange="window.open(this.value, '_blank')">
+        <option disabled selected>Select State Council</option>
+        <option value="https://www.nmc.org.in/information-desk/indian-medical-register/">National Medical Commission</option>
+        <option value="https://maharashtramedicalcouncil.in/OnlineReg/verify.aspx">Maharashtra</option>
+        <option value="https://karnatakamedicalcouncil.com/verify">Karnataka</option>
+        <option value="https://www.tnmedicalcouncil.org/verify.php">Tamil Nadu</option>
+        <option value="https://www.gmcgujarat.org/verify">Gujarat</option>
+        <option value="https://www.mpmedicalcouncil.org/verify.php">Madhya Pradesh</option>
+        <option value="https://www.tsmc.in/verify.aspx">Telangana</option>
       </select>
     </div>
-    <a href="index.html" class="back-button">⬅ Back to Home</a>
+
+    <!-- Lawyers -->
+    <div class="card" data-aos="fade-up">
+      <h2>Lawyer Verification</h2>
+      <select onchange="window.open(this.value, '_blank')">
+        <option disabled selected>Select Bar Council</option>
+        <option value="https://www.nmc.org.in/information-desk/indian-medical-register/">National Medical Commission</option>
+        <option value="https://barcouncilmah.org/advocate-search/">Maharashtra</option>
+        <option value="https://www.ksbc.org.in/advocate-search">Karnataka</option>
+        <option value="https://www.barcounciloftamilnadu.org/advocate-search/">Tamil Nadu</option>
+        <option value="https://barcouncilofgujarat.org/advocate-search/">Gujarat</option>
+        <option value="https://www.barcouncilmp.org/advocate-search">Madhya Pradesh</option>
+        <option value="https://barcounciloftelangana.org/advocate-search/">Telangana</option>
+      </select>
+    </div>
+
+    <!-- Insurance -->
+    <div class="card" data-aos="fade-up">
+      <h2>IRDA Agent</h2>
+      <a href="https://agencyportal.irdai.gov.in/PublicAccess/AgentLocator.aspx" target="_blank">Verify Now</a>
+    </div>
+
+    <!-- Surveyor -->
+    <div class="card" data-aos="fade-up">
+      <h2>Surveyor Verification</h2>
+      <a href="https://surveyor.irdai.gov.in/" target="_blank">Verify Now</a>
+    </div>
+
   </div>
 
-  <div class="grid">
-    <div class="card" data-aos="fade-up"><h2>GST Portal</h2><a href="https://services.gst.gov.in/services/searchtp" target="_blank">Verify GST</a></div>
-    <div class="card" data-aos="fade-up"><h2>UDYAM/MSME</h2><a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank">Verify MSME</a></div>
-    <div class="card" data-aos="fade-up"><h2>FSSAI (FoSCoS)</h2><a href="https://foscos.fssai.gov.in/" target="_blank">Check FSSAI</a></div>
-    <div class="card" data-aos="fade-up"><h2>IEC Code</h2><a href="https://www.dgft.gov.in/CP/" target="_blank">Verify IEC</a></div>
-    <div class="card" data-aos="fade-up"><h2>Trade License</h2><a href="https://www.mcciapune.com/" target="_blank">Search License</a></div>
-    <div class="card" data-aos="fade-up"><h2>Doctor (MCI/State)</h2><a href="https://www.nmc.org.in/information-desk/indian-medical-register/" target="_blank">Check Doctor</a></div>
-    <div class="card" data-aos="fade-up"><h2>Lawyer</h2><a href="https://www.barcouncilofindia.org/" target="_blank">Check Lawyer</a></div>
-    <div class="card" data-aos="fade-up"><h2>Surveyor (IRDAI)</h2><a href="https://irdai.gov.in/" target="_blank">Check Surveyor</a></div>
-    <div class="card" data-aos="fade-up"><h2>Insurance Agent</h2><a href="https://agencyportal.irdai.gov.in/" target="_blank">Check IRDA Agent</a></div>
-    <div class="card" data-aos="fade-up"><h2>CA (ICAI)</h2><a href="https://www.icai.org/post/members-directory" target="_blank">Verify CA</a></div>
-    <div class="card" data-aos="fade-up"><h2>CS (ICSI)</h2><a href="https://www.icsi.edu/member/" target="_blank">Verify CS</a></div>
-    <div class="card" data-aos="fade-up"><h2>CMA (ICMAI)</h2><a href="https://www.icmai.in/" target="_blank">Verify CMA</a></div>
-  </div>
-
-  <footer>Made with by Someone</footer>
+  <a href="index.html" class="back-button" data-aos="fade-up">⬅ Back to Home</a>
+  <footer>Made with ❤️ by Someone</footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const themes = {
-      white: {
-        "--primary": "#0ea5e9",
-        "--accent": "#0284c7",
-        "--bg": "#f8fafc",
-        "--text": "#0f172a"
-      },
-      black: {
-        "--primary": "#0f172a",
-        "--accent": "#1e293b",
-        "--bg": "#000000",
-        "--text": "#f8fafc"
-      },
-      red: {
-        "--primary": "#dc2626",
-        "--accent": "#991b1b",
-        "--bg": "#fff1f2",
-        "--text": "#1c0507"
-      }
-    };
-
-    const select = document.getElementById("themeSwitcher");
-    select.addEventListener("change", e => applyTheme(e.target.value));
-
-    function applyTheme(theme) {
-      const vars = themes[theme];
-      for (let key in vars) {
-        document.documentElement.style.setProperty(key, vars[key]);
-      }
-      localStorage.setItem("verifyx-theme", theme);
-    }
-
-    const saved = localStorage.getItem("verifyx-theme") || "white";
-    select.value = saved;
-    applyTheme(saved);
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
