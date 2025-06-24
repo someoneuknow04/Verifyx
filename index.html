@@ -2,95 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VerifyX</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #0ea5e9;
+      --accent: #0284c7;
+      --bg: #f8fafc;
+      --text: #0f172a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Manrope', sans-serif;
-      background: linear-gradient(to right, #f0f4f8, #ffffff);
-      color: #0f172a;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
     }
-    .wrapper {
-      height: 100vh;
+
+    /* Split Hero */
+    .split-hero {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      height: 100vh;
+      position: relative;
     }
-    header {
-      padding: 2rem 1.5rem;
+
+    .left, .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 2rem;
     }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #0ea5e9;
+
+    .left {
+      background-color: #ef4444;
+      color: white;
+      flex-direction: column;
     }
+
+    .right {
+      background-color: #ffffff;
+      color: #1e293b;
+      flex-direction: column;
+    }
+
+    .split-hero img.logo-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 180px;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .cta-button {
+      margin-top: 1.5rem;
+      padding: 12px 28px;
+      font-weight: 600;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: white;
+      color: #ef4444;
+    }
+
+    .scroll-down {
+      text-align: center;
+      margin-top: -24px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    /* Theme dropdown */
+    .theme-switcher {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 20;
+    }
+
+    .theme-switcher select {
+      padding: 8px;
+      border-radius: 8px;
+      font-weight: 600;
+      background: white;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Walkthrough button */
+    .top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 20;
+    }
+
+    .top-right a {
+      padding: 0.75rem 1.25rem;
+      background: var(--text);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Grid section */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
       padding: 2rem;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 2rem auto;
     }
+
     .card {
       background: #fff;
       padding: 2rem;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
       text-align: center;
       transition: all 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     }
+
     .card h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: #0284c7;
+      color: var(--primary);
     }
+
     .card p {
       font-size: 0.95rem;
       color: #475569;
       margin-bottom: 1.5rem;
     }
+
     .card a {
       padding: 10px 20px;
-      background: #0ea5e9;
+      background: var(--primary);
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
       transition: background 0.3s ease;
     }
+
     .card a:hover {
-      background: #0284c7;
+      background: var(--accent);
     }
-    .top-right {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
+
     footer {
       text-align: center;
       font-size: 14px;
       color: #64748b;
       padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="top-right">
-      <a href="walkthrough.html" class="card" style="padding: 0.75rem 1.25rem; background: #0f172a; color: #fff;">Walkthrough</a>
+
+  <!-- Theme Dropdown -->
+  <div class="theme-switcher">
+    <select id="themeSwitcher">
+      <option value="white">⚪ White</option>
+      <option value="black">⚫ Black</option>
+      <option value="red">🔴 Red</option>
+    </select>
+  </div>
+
+  <!-- Walkthrough Button -->
+  <div class="top-right">
+    <a href="walkthrough.html">Walkthrough</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="split-hero">
+    <div class="left">
+      <div>
+        <h2>The combination of great design and diligent app development.</h2>
+        <a href="#verify-sections" class="cta-button">View Tools</a>
+      </div>
     </div>
-    <header data-aos="fade-down">
-      <h1>Welcome to VerifyX</h1>
-    </header>
+    <div class="right">
+      <h2>We make <span style="color:#ef4444;">sleek and modern</span> designs for your business.</h2>
+    </div>
+    <img src="vak-logo.jpg" alt="VAK Reports Logo" class="logo-center" />
+  </section>
+
+  <div class="scroll-down">▼ Scroll to explore ▼</div>
+
+  <!-- Main Content -->
+  <div id="verify-sections">
     <main class="grid">
       <div class="card" data-aos="fade-up">
         <h2>Business Verification</h2>
@@ -103,9 +228,49 @@
         <a href="bank.html">Explore</a>
       </div>
     </main>
-    <footer>Made by Someone</footer>
   </div>
+
+  <footer>Made with ❤️ by Someone</footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+
+    const themes = {
+      white: {
+        "--primary": "#0ea5e9",
+        "--accent": "#0284c7",
+        "--bg": "#f8fafc",
+        "--text": "#0f172a"
+      },
+      black: {
+        "--primary": "#0f172a",
+        "--accent": "#1e293b",
+        "--bg": "#000000",
+        "--text": "#f8fafc"
+      },
+      red: {
+        "--primary": "#dc2626",
+        "--accent": "#991b1b",
+        "--bg": "#fff1f2",
+        "--text": "#1c0507"
+      }
+    };
+
+    function applyTheme(theme) {
+      const vars = themes[theme];
+      for (let key in vars) {
+        document.documentElement.style.setProperty(key, vars[key]);
+      }
+      localStorage.setItem("verifyx-theme", theme);
+    }
+
+    const select = document.getElementById("themeSwitcher");
+    select.addEventListener("change", (e) => applyTheme(e.target.value));
+
+    const saved = localStorage.getItem("verifyx-theme") || "white";
+    select.value = saved;
+    applyTheme(saved);
+  </script>
 </body>
 </html>
