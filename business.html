@@ -148,9 +148,12 @@
 
     <div class="card" data-aos="fade-up">
       <h3>Car Info (RC Deatils) </h3>
-      <a href="https://www.carinfo.app/rc-search" target="_blank">Verify</a>
+       <select onchange="if(this.value) window.open(this.value, '_blank')">
+        <option value="">Select Portal</option>
+        <option value="https://www.carinfo.app/rc-search</option>
+      <option value="https://vehicleinfo.app/</option>
     </div>
-
+    
   </div>
 
   <a href="index.html" class="back-button">⬅ Back to Home</a>
