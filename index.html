@@ -41,19 +41,23 @@
       height: calc(100vh - 160px);
     }
 
-    .left, .right {
-      flex: 1 1 50%;
+    .left, .center, .right {
+      flex: 1 1 33.33%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
       padding: 60px 20px;
       text-align: center;
+      color: white;
     }
 
     .left {
       background: #ef4444;
+    }
+
+    .center {
+      background: #4b5563;
     }
 
     .right {
@@ -99,7 +103,7 @@
         height: auto;
       }
 
-      .left, .right {
+      .left, .center, .right {
         min-height: 60vh;
       }
 
@@ -128,11 +132,11 @@
       <a class="btn" href="business.html">Verify Now</a>
     </div>
     <div class="center">
-      <h1>Profession Certificate Verification</h1>
-      <p>Search and validate professional licenses and professional IDs instantly</p>
+      <h1>Professional Certificate Verification</h1>
+      <p>Search and validate professional licenses and IDs instantly.</p>
       <a class="btn" href="profession.html">Go to Portals</a>
     </div>
-          <div class="right">
+    <div class="right">
       <h1>Bank Portals</h1>
       <p>Login to associated bank dashboards with one click.</p>
       <a class="btn" href="bank.html">Go to Portals</a>
